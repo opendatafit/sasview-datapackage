@@ -1,0 +1,24 @@
+{
+  "title": "SasView 1D",
+  "description": "SasView 1D data fitter",
+  "algorithms": [
+    {
+      "name": "sasview"
+    }
+  ],
+  "resources": [
+    {
+      "name": "inputData"
+    }
+  ],
+  "views": [
+    {
+      "name": "upload"
+    }
+  ],
+  "displays": [
+    {
+      "name": "main"
+    }
+  ]
+}

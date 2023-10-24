@@ -1,0 +1,48 @@
+{
+  "name": "sasview",
+  "title": "SasView 1D",
+  "code": "",
+  "inputs": [
+    {
+      "name": "params",
+      "type": "algorithmParams",
+      "resource": {
+        "params": "inputParams",
+        "sfParams": "inputSFParams",
+        "options": "inputOptions"
+      },
+      "resources": {
+        "params": ["inputParams"],
+        "sfParams": ["inputSFParams"],
+        "options": ["inputOptions"]
+      }
+    },
+    {
+      "name": "data",
+      "type": "resource",
+      "resource": "inputData"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "data",
+      "type": "resource",
+      "resource": "outputData"
+    },
+    {
+      "name": "fit",
+      "type": "resource",
+      "resource": "outputFit"
+    },
+    {
+      "name": "params",
+      "type": "resource",
+      "resource": "outputParams"
+    },
+    {
+      "name": "stats",
+      "type": "resource",
+      "resource": "outputStats"
+    }
+  ]
+}
