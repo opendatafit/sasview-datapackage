@@ -1,5 +1,5 @@
 {
-  "name": "hardsphere",
+  "name": "inputSFParamsHardSphere",
   "metadata": {
     "model": {
       "name": "hardsphere",
@@ -77,6 +77,12 @@
             "type": "number"
           }
         ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "polydispersity",
+        "title": "Polydispersity"
       }
     ]
   },

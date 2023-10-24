@@ -19,6 +19,11 @@ from sasmodels.weights import MODELS as POLYDISPERSITY_MODELS
 sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
 
 
+DEFAULT_PARAMS_RESOURCE = "inputParamsSphere"
+DEFAULT_SF_PARAMS_RESOURCE = None
+DEFAULT_OPTIONS_RESOURCE = None
+
+
 def diff(list1, list2):
     # Returns difference between two lists
     return list(set(list1) - set(list2))
@@ -128,8 +133,13 @@ def base_model_to_param_resource(model):
                 # "fittable": fittable,
             }
 
+    if model.is_structure_factor:
+        name_prefix = "inputSFParams"
+    else:
+        name_prefix = "inputParams"
+
     resource = {
-        "name": model.name,
+        "name": name_prefix + make_human_readable(model.name).replace(" ", ""),
         "metadata": {
             "model": {
                 "name": model.name,
@@ -327,9 +337,6 @@ def model_to_param_resource(model, polydispersity=False):
 
 
 if __name__ == "__main__":
-    params_resources = []
-    sf_params_resources = []
-
     # Load all available sasmodels (as SasviewModel classes)
 
     # SasviewModel - apparently a sasview wrapper for kernel model used in
@@ -341,30 +348,22 @@ if __name__ == "__main__":
     # perspectives/fitting/fitproblem.py
     # perspectives/fitting/fitstate.py
 
+    param_resources = []
+    sf_param_resources = []
+
+    # Populate resources directory
     for model in load_standard_models():
-        if not model.is_structure_factor:
-            resource = model_to_param_resource(
-                model(),
-                polydispersity=True,
-            )
+        resource = model_to_param_resource(
+            model(),
+            polydispersity=True,
+        )
 
-            path = (
-                "./resources/inputParams"
-                + make_human_readable(model().name).replace(" ", "")
-                + ".json"
-            )
+        path = "./resources/" + resource["name"] + ".json"
+
+        if model().is_structure_factor:
+            sf_param_resources.append(resource["name"])
         else:
-            # Structure factor model
-            resource = model_to_param_resource(
-                model(),
-                polydispersity=False,
-            )
-
-            path = (
-                "./resources/inputSFParams"
-                + make_human_readable(model().name).replace(" ", "")
-                + ".json"
-            )
+            param_resources.append(resource["name"])
 
         with open(path, "w") as f:
             # Replace infinite bounds with nulls
@@ -373,5 +372,24 @@ if __name__ == "__main__":
                 .replace(": Infinity", ": null")
                 .replace(": -Infinity", ": null")
             )
+
+    # Populate sasview algorithm json
+    with open("./algorithms/sasview.json.template", "r") as f:
+        algorithm = json.load(f)
+
+        # Set default resources
+        algorithm["inputs"][0]["resource"] = {
+            "params": DEFAULT_PARAMS_RESOURCE,
+            "sfParams": DEFAULT_SF_PARAMS_RESOURCE,
+            "options": DEFAULT_OPTIONS_RESOURCE,
+        }
+
+        # Populate enums
+        algorithm["inputs"][0]["resources"]["params"] = param_resources
+        algorithm["inputs"][0]["resources"]["sfParams"] = sf_param_resources
+        algorithm["inputs"][0]["resources"]["options"] = []
+
+        with open("./algorithms/sasview.json", "w") as f:
+            json.dump(algorithm, f, indent=2)
 
     print("Done!")

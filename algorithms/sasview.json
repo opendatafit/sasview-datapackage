@@ -1,0 +1,127 @@
+{
+  "name": "sasview",
+  "title": "SasView 1D",
+  "code": "",
+  "inputs": [
+    {
+      "name": "params",
+      "type": "algorithmParams",
+      "resource": {
+        "params": "inputParamsSphere",
+        "sfParams": null,
+        "options": null
+      },
+      "resources": {
+        "params": [
+          "inputParamsAdsorbedLayer",
+          "inputParamsBarbell",
+          "inputParamsBCCParacrystal",
+          "inputParamsBEPolyelectrolyte",
+          "inputParamsBinaryHardSphere",
+          "inputParamsBroadPeak",
+          "inputParamsCappedCylinder",
+          "inputParamsCoreMultiShell",
+          "inputParamsCoreShellBicelle",
+          "inputParamsCoreShellBicelleElliptical",
+          "inputParamsCoreShellBicelleEllipticalBeltRough",
+          "inputParamsCoreShellCylinder",
+          "inputParamsCoreShellEllipsoid",
+          "inputParamsCoreShellParallelepiped",
+          "inputParamsCoreShellSphere",
+          "inputParamsCorrelationLength",
+          "inputParamsCylinder",
+          "inputParamsDAB",
+          "inputParamsEllipsoid",
+          "inputParamsEllipticalCylinder",
+          "inputParamsFCCParacrystal",
+          "inputParamsFlexibleCylinder",
+          "inputParamsFlexibleCylinderElliptical",
+          "inputParamsFractal",
+          "inputParamsFractalCoreShell",
+          "inputParamsFuzzySphere",
+          "inputParamsGaussLorentzGel",
+          "inputParamsGaussianPeak",
+          "inputParamsGelFit",
+          "inputParamsGuinier",
+          "inputParamsGuinierPorod",
+          "inputParamsHollowCylinder",
+          "inputParamsHollowRectangularPrism",
+          "inputParamsHollowRectangularPrismThinWalls",
+          "inputParamsLamellar",
+          "inputParamsLamellarHg",
+          "inputParamsLamellarHgStackCaille",
+          "inputParamsLamellarStackCaille",
+          "inputParamsLamellarStackParacrystal",
+          "inputParamsLine",
+          "inputParamsLinearPearls",
+          "inputParamsLorentz",
+          "inputParamsMassFractal",
+          "inputParamsMassSurfaceFractal",
+          "inputParamsMonoGaussCoil",
+          "inputParamsMultilayerVesicle",
+          "inputParamsOnion",
+          "inputParamsParallelepiped",
+          "inputParamsPeakLorentz",
+          "inputParamsPearlNecklace",
+          "inputParamsPolyGaussCoil",
+          "inputParamsPolymerExclVolume",
+          "inputParamsPolymerMicelle",
+          "inputParamsPorod",
+          "inputParamsPowerLaw",
+          "inputParamsPringle",
+          "inputParamsRaspberry",
+          "inputParamsRectangularPrism",
+          "inputParamsRPA",
+          "inputParamsSCParacrystal",
+          "inputParamsSphere",
+          "inputParamsSphericalSld",
+          "inputParamsSpinodal",
+          "inputParamsStackedDisks",
+          "inputParamsStarPolymer",
+          "inputParamsSuperball",
+          "inputParamsSurfaceFractal",
+          "inputParamsTeubnerStrey",
+          "inputParamsTriaxialEllipsoid",
+          "inputParamsTwoLorentzian",
+          "inputParamsTwoPowerLaw",
+          "inputParamsUnifiedPowerRg",
+          "inputParamsVesicle"
+        ],
+        "sfParams": [
+          "inputSFParamsHardSphere",
+          "inputSFParamsHayterMSA",
+          "inputSFParamsSquareWell",
+          "inputSFParamsStickyHardSphere"
+        ],
+        "options": []
+      }
+    },
+    {
+      "name": "data",
+      "type": "resource",
+      "resource": "inputData"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "data",
+      "type": "resource",
+      "resource": "outputData"
+    },
+    {
+      "name": "fit",
+      "type": "resource",
+      "resource": "outputFit"
+    },
+    {
+      "name": "params",
+      "type": "resource",
+      "resource": "outputParams"
+    },
+    {
+      "name": "stats",
+      "type": "resource",
+      "resource": "outputStats"
+    }
+  ]
+}

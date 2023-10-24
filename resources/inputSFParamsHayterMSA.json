@@ -1,5 +1,5 @@
 {
-  "name": "hayter_msa",
+  "name": "inputSFParamsHayterMSA",
   "metadata": {
     "model": {
       "name": "hayter_msa",
@@ -42,6 +42,21 @@
       "value": 0.0,
       "lowerBound": 0.0,
       "upperBound": null
+    },
+    "radius_effective_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "radius_effective_pd_n": {
+      "value": 35
+    },
+    "radius_effective_pd_nsigma": {
+      "value": 3
+    },
+    "radius_effective_pd_type": {
+      "value": "gaussian"
     }
   },
   "schema": {
@@ -184,6 +199,12 @@
             "title": "Upper bound",
             "type": "number"
           }
+        ],
+        "relatedKeys": [
+          "radius_effective_pd",
+          "radius_effective_pd_n",
+          "radius_effective_pd_nsigma",
+          "radius_effective_pd_type"
         ]
       },
       {
@@ -213,6 +234,104 @@
             "type": "number"
           }
         ]
+      },
+      {
+        "name": "radius_effective_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:radius_effective",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_effective_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "radius_effective_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_effective_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "polydispersity",
+        "title": "Polydispersity"
       }
     ]
   },
