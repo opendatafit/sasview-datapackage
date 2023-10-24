@@ -17,6 +17,7 @@
     in {
       devShells.default = pkgs.mkShell {
         buildInputs = [
+          pkgs.pre-commit
           pkgs.python310
           pkgs.python310Packages.h5py
           pkgs.python310Packages.lxml
