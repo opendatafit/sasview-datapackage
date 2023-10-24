@@ -18,9 +18,12 @@
       devShells.default = pkgs.mkShell {
         buildInputs = [
           pkgs.python310
+          pkgs.python310Packages.h5py
+          pkgs.python310Packages.lxml
           pkgs.python310Packages.numpy
           pkgs.python310Packages.scipy
-          pkgs.python310Packages.pandas
+          pkgs.python310Packages.bumps
+          pkgs.python310Packages.sasmodels
         ];
       };
     });
