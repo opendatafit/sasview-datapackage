@@ -1,0 +1,2149 @@
+{
+  "name": "core_multi_shell",
+  "metadata": {
+    "model": {
+      "name": "core_multi_shell",
+      "title": "Core Multi Shell"
+    }
+  },
+  "data": {
+    "thickness1": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "thickness5": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld6": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "background": {
+      "vary": false,
+      "value": 0.001,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness10": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld1": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "radius": {
+      "vary": false,
+      "value": 200.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld9": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness8": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "scale": {
+      "vary": false,
+      "value": 1,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld5": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld3": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld2": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness3": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld10": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld4": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness7": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "n": {
+      "vary": false,
+      "value": 1,
+      "lowerBound": 0.0,
+      "upperBound": 10.0
+    },
+    "sld7": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld8": {
+      "vary": false,
+      "value": 1.7,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness2": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "thickness4": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "sld_solvent": {
+      "vary": false,
+      "value": 6.4,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld_core": {
+      "vary": false,
+      "value": 1.0,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "thickness6": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "thickness9": {
+      "vary": false,
+      "value": 40.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "radius_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "radius_pd_n": {
+      "value": 35
+    },
+    "radius_pd_nsigma": {
+      "value": 3
+    },
+    "radius_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness1_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness1_pd_n": {
+      "value": 35
+    },
+    "thickness1_pd_nsigma": {
+      "value": 3
+    },
+    "thickness1_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness2_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness2_pd_n": {
+      "value": 35
+    },
+    "thickness2_pd_nsigma": {
+      "value": 3
+    },
+    "thickness2_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness3_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness3_pd_n": {
+      "value": 35
+    },
+    "thickness3_pd_nsigma": {
+      "value": 3
+    },
+    "thickness3_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness4_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness4_pd_n": {
+      "value": 35
+    },
+    "thickness4_pd_nsigma": {
+      "value": 3
+    },
+    "thickness4_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness5_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness5_pd_n": {
+      "value": 35
+    },
+    "thickness5_pd_nsigma": {
+      "value": 3
+    },
+    "thickness5_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness6_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness6_pd_n": {
+      "value": 35
+    },
+    "thickness6_pd_nsigma": {
+      "value": 3
+    },
+    "thickness6_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness7_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness7_pd_n": {
+      "value": 35
+    },
+    "thickness7_pd_nsigma": {
+      "value": 3
+    },
+    "thickness7_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness8_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness8_pd_n": {
+      "value": 35
+    },
+    "thickness8_pd_nsigma": {
+      "value": 3
+    },
+    "thickness8_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness9_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness9_pd_n": {
+      "value": 35
+    },
+    "thickness9_pd_nsigma": {
+      "value": 3
+    },
+    "thickness9_pd_type": {
+      "value": "gaussian"
+    },
+    "thickness10_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "thickness10_pd_n": {
+      "value": 35
+    },
+    "thickness10_pd_nsigma": {
+      "value": 3
+    },
+    "thickness10_pd_type": {
+      "value": "gaussian"
+    }
+  },
+  "schema": {
+    "keys": [
+      {
+        "name": "thickness1",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness1_pd",
+          "thickness1_pd_n",
+          "thickness1_pd_nsigma",
+          "thickness1_pd_type"
+        ]
+      },
+      {
+        "name": "thickness5",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness5_pd",
+          "thickness5_pd_n",
+          "thickness5_pd_nsigma",
+          "thickness5_pd_type"
+        ]
+      },
+      {
+        "name": "sld6",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "background",
+        "unit": "1/cm",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness10",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness10_pd",
+          "thickness10_pd_n",
+          "thickness10_pd_nsigma",
+          "thickness10_pd_type"
+        ]
+      },
+      {
+        "name": "sld1",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "radius_pd",
+          "radius_pd_n",
+          "radius_pd_nsigma",
+          "radius_pd_type"
+        ]
+      },
+      {
+        "name": "sld9",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness8",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness8_pd",
+          "thickness8_pd_n",
+          "thickness8_pd_nsigma",
+          "thickness8_pd_type"
+        ]
+      },
+      {
+        "name": "scale",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld5",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld3",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld2",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness3",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness3_pd",
+          "thickness3_pd_n",
+          "thickness3_pd_nsigma",
+          "thickness3_pd_type"
+        ]
+      },
+      {
+        "name": "sld10",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld4",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness7",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness7_pd",
+          "thickness7_pd_n",
+          "thickness7_pd_nsigma",
+          "thickness7_pd_type"
+        ]
+      },
+      {
+        "name": "n",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld7",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld8",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness2",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness2_pd",
+          "thickness2_pd_n",
+          "thickness2_pd_nsigma",
+          "thickness2_pd_type"
+        ]
+      },
+      {
+        "name": "thickness4",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness4_pd",
+          "thickness4_pd_n",
+          "thickness4_pd_nsigma",
+          "thickness4_pd_type"
+        ]
+      },
+      {
+        "name": "sld_solvent",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld_core",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness6",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness6_pd",
+          "thickness6_pd_n",
+          "thickness6_pd_nsigma",
+          "thickness6_pd_type"
+        ]
+      },
+      {
+        "name": "thickness9",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "thickness9_pd",
+          "thickness9_pd_n",
+          "thickness9_pd_nsigma",
+          "thickness9_pd_type"
+        ]
+      },
+      {
+        "name": "radius_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:radius",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "radius_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness1_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness1",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness1_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness1_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness1_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness2_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness2",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness2_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness2_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness2_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness3_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness3",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness3_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness3_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness3_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness4_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness4",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness4_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness4_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness4_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness5_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness5",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness5_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness5_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness5_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness6_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness6",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness6_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness6_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness6_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness7_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness7",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness7_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness7_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness7_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness8_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness8",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness8_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness8_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness8_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness9_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness9",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness9_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness9_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness9_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness10_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:thickness10",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness10_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "thickness10_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "thickness10_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "polydispersity",
+        "title": "Polydispersity"
+      }
+    ]
+  },
+  "profile": "parameter-data-resource"
+}

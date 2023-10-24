@@ -1,0 +1,220 @@
+{
+  "name": "hayter_msa",
+  "metadata": {
+    "model": {
+      "name": "hayter_msa",
+      "title": "Hayter MSA"
+    }
+  },
+  "data": {
+    "charge": {
+      "vary": false,
+      "value": 19.0,
+      "lowerBound": 1e-06,
+      "upperBound": 200.0
+    },
+    "dielectconst": {
+      "vary": false,
+      "value": 71.08,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "volfraction": {
+      "vary": false,
+      "value": 0.0192,
+      "lowerBound": 0.0,
+      "upperBound": 0.74
+    },
+    "temperature": {
+      "vary": false,
+      "value": 318.16,
+      "lowerBound": 0.0,
+      "upperBound": 450.0
+    },
+    "radius_effective": {
+      "vary": false,
+      "value": 20.75,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "concentration_salt": {
+      "vary": false,
+      "value": 0.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    }
+  },
+  "schema": {
+    "keys": [
+      {
+        "name": "charge",
+        "unit": "e",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "dielectconst",
+        "unit": "None",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "volfraction",
+        "unit": "None",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "temperature",
+        "unit": "K",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_effective",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "concentration_salt",
+        "unit": "M",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  },
+  "profile": "parameter-data-resource"
+}

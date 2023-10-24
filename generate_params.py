@@ -10,6 +10,7 @@ This script populates:
 
 import os
 import sys
+import json
 
 from sasmodels.sasview_model import load_standard_models
 from sasmodels.weights import MODELS as POLYDISPERSITY_MODELS
@@ -29,6 +30,30 @@ def index(lst, key, value):
         if dic[key] == value:
             return i
     return None
+
+
+def make_human_readable(name):
+    # Convenience method for converting model names to human readable titles
+    exceptions = {
+        "hardsphere": "Hard Sphere",
+        "stickyhardsphere": "Sticky Hard Sphere",
+        "squarewell": "Square Well",
+        "hayter_msa": "Hayter MSA",
+        "bcc_paracrystal": "BCC Paracrystal",
+        "fcc_paracrystal": "FCC Paracrystal",
+        "sc_paracrystal": "SC Paracrystal",
+        "be_polyelectrolyte": "BE Polyelectrolyte",
+        "rpa": "RPA",
+        "dab": "DAB",
+        "shape-independent": "Shape-independent",
+    }
+
+    if name in exceptions:
+        return exceptions[name]
+    elif "shape:" in name:
+        return ": ".join([i.capitalize() for i in name.split(":")])
+    else:
+        return " ".join([i.capitalize() for i in name.split("_")])
 
 
 def base_model_to_param_resource(model):
@@ -105,6 +130,12 @@ def base_model_to_param_resource(model):
 
     resource = {
         "name": model.name,
+        "metadata": {
+            "model": {
+                "name": model.name,
+                "title": make_human_readable(model.name),
+            },
+        },
         "data": data,
         "schema": {
             "keys": keys,
@@ -164,7 +195,6 @@ def model_to_param_resource(model, polydispersity=False):
             param_pd_n = param + "_pd_n"
             param_pd_nsigma = param + "_pd_nsigma"
             param_pd_type = param + "_pd_type"
-
             # Append polydispersity parameter metadata to parent key fields
             resource["schema"]["keys"].extend(
                 [
@@ -313,45 +343,35 @@ if __name__ == "__main__":
 
     for model in load_standard_models():
         if not model.is_structure_factor:
-            params_resources.append(
-                model_to_param_resource(
-                    model(),
-                    polydispersity=True,
-                )
+            resource = model_to_param_resource(
+                model(),
+                polydispersity=True,
+            )
+
+            path = (
+                "./resources/inputParams"
+                + make_human_readable(model().name).replace(" ", "")
+                + ".json"
             )
         else:
-            sf_params_resources.append(
-                model_to_param_resource(
-                    model(),
-                    polydispersity=False,
-                )
+            # Structure factor model
+            resource = model_to_param_resource(
+                model(),
+                polydispersity=False,
             )
 
-    # params_output = {
-    #     "resourceScaffolds": params_resources,
-    #     "viewScaffolds": params_views,
-    # }
+            path = (
+                "./resources/inputSFParams"
+                + make_human_readable(model().name).replace(" ", "")
+                + ".json"
+            )
 
-    # sf_params_output = {
-    #     "resourceScaffolds": sf_params_resources,
-    #     "viewScaffolds": sf_params_views,
-    # }
-
-    # params_json = json.dumps(params_output, indent=2)
-    # params_json = params_json.replace(": Infinity", ': "Infinity"').replace(
-    #     ": -Infinity", ': "-Infinity"'
-    # )
-
-    # sf_params_json = json.dumps(sf_params_output, indent=2)
-    # sf_params_json = sf_params_json.replace(": Infinity", ': "Infinity"')
-    # .replace(
-    #     ": -Infinity", ': "-Infinity"'
-    # )
-
-    # with open(SCAFFOLD_DIR+"params.json", "w") as f:
-    #     f.write(params_json)
-
-    # with open(SCAFFOLD_DIR+"sf_params.json", "w") as f:
-    #     f.write(sf_params_json)
+        with open(path, "w") as f:
+            # Replace infinite bounds with nulls
+            f.write(
+                json.dumps(resource, indent=2)
+                .replace(": Infinity", ": null")
+                .replace(": -Infinity", ": null")
+            )
 
     print("Done!")

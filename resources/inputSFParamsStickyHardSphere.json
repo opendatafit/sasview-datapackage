@@ -1,0 +1,152 @@
+{
+  "name": "stickyhardsphere",
+  "metadata": {
+    "model": {
+      "name": "stickyhardsphere",
+      "title": "Sticky Hard Sphere"
+    }
+  },
+  "data": {
+    "perturb": {
+      "vary": false,
+      "value": 0.05,
+      "lowerBound": 0.01,
+      "upperBound": 0.1
+    },
+    "stickiness": {
+      "vary": false,
+      "value": 0.2,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "volfraction": {
+      "vary": false,
+      "value": 0.2,
+      "lowerBound": 0.0,
+      "upperBound": 0.74
+    },
+    "radius_effective": {
+      "vary": false,
+      "value": 50.0,
+      "lowerBound": 0.0,
+      "upperBound": null
+    }
+  },
+  "schema": {
+    "keys": [
+      {
+        "name": "perturb",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "stickiness",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "volfraction",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_effective",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  },
+  "profile": "parameter-data-resource"
+}

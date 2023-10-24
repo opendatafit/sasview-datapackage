@@ -1,0 +1,735 @@
+{
+  "name": "raspberry",
+  "metadata": {
+    "model": {
+      "name": "raspberry",
+      "title": "Raspberry"
+    }
+  },
+  "data": {
+    "radius_sm": {
+      "vary": false,
+      "value": 100,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "background": {
+      "vary": false,
+      "value": 0.001,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "radius_lg": {
+      "vary": false,
+      "value": 5000,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "scale": {
+      "vary": false,
+      "value": 1,
+      "lowerBound": 0.0,
+      "upperBound": null
+    },
+    "penetration": {
+      "vary": false,
+      "value": 0,
+      "lowerBound": -1.0,
+      "upperBound": 1.0
+    },
+    "volfraction_sm": {
+      "vary": false,
+      "value": 0.005,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld_sm": {
+      "vary": false,
+      "value": 3.5,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld_lg": {
+      "vary": false,
+      "value": -0.4,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "surface_fraction": {
+      "vary": false,
+      "value": 0.4,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "volfraction_lg": {
+      "vary": false,
+      "value": 0.05,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "sld_solvent": {
+      "vary": false,
+      "value": 6.36,
+      "lowerBound": null,
+      "upperBound": null
+    },
+    "radius_lg_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "radius_lg_pd_n": {
+      "value": 35
+    },
+    "radius_lg_pd_nsigma": {
+      "value": 3
+    },
+    "radius_lg_pd_type": {
+      "value": "gaussian"
+    },
+    "radius_sm_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "radius_sm_pd_n": {
+      "value": 35
+    },
+    "radius_sm_pd_nsigma": {
+      "value": 3
+    },
+    "radius_sm_pd_type": {
+      "value": "gaussian"
+    },
+    "penetration_pd": {
+      "value": 0,
+      "lowerBound": 0.0,
+      "upperBound": 1.0,
+      "vary": false
+    },
+    "penetration_pd_n": {
+      "value": 35
+    },
+    "penetration_pd_nsigma": {
+      "value": 3
+    },
+    "penetration_pd_type": {
+      "value": "gaussian"
+    }
+  },
+  "schema": {
+    "keys": [
+      {
+        "name": "radius_sm",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "radius_sm_pd",
+          "radius_sm_pd_n",
+          "radius_sm_pd_nsigma",
+          "radius_sm_pd_type"
+        ]
+      },
+      {
+        "name": "background",
+        "unit": "1/cm",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_lg",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "radius_lg_pd",
+          "radius_lg_pd_n",
+          "radius_lg_pd_nsigma",
+          "radius_lg_pd_type"
+        ]
+      },
+      {
+        "name": "scale",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "penetration",
+        "unit": "Ang",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ],
+        "relatedKeys": [
+          "penetration_pd",
+          "penetration_pd_n",
+          "penetration_pd_nsigma",
+          "penetration_pd_type"
+        ]
+      },
+      {
+        "name": "volfraction_sm",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld_sm",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld_lg",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "surface_fraction",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "volfraction_lg",
+        "unit": "",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "sld_solvent",
+        "unit": "1e-6/Ang^2",
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          },
+          {
+            "name": "lowerBound",
+            "group": "constraints",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "group": "constraints",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_lg_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:radius_lg",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_lg_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "radius_lg_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_lg_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "radius_sm_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:radius_sm",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_sm_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "radius_sm_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "radius_sm_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "penetration_pd",
+        "title": "Width",
+        "description": "Polydispersity width of parameter:penetration",
+        "unit": "",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "vary",
+            "title": "Vary",
+            "type": "boolean"
+          },
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          },
+          {
+            "name": "lowerBound",
+            "title": "Lower bound",
+            "type": "number"
+          },
+          {
+            "name": "upperBound",
+            "title": "Upper bound",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "penetration_pd_n",
+        "title": "N points",
+        "description": "Number of points",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "integer",
+            "constraints": {
+              "min": 0
+            }
+          }
+        ]
+      },
+      {
+        "name": "penetration_pd_nsigma",
+        "title": "N sigmas",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "name": "penetration_pd_type",
+        "title": "Type",
+        "description": "Polydispersity type",
+        "groups": [
+          "polydispersity"
+        ],
+        "fields": [
+          {
+            "name": "value",
+            "title": "Value",
+            "type": "string",
+            "constraints": {
+              "enum": [
+                "rectangle",
+                "uniform",
+                "array",
+                "lognormal",
+                "gaussian",
+                "schulz",
+                "boltzmann"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "name": "polydispersity",
+        "title": "Polydispersity"
+      }
+    ]
+  },
+  "profile": "parameter-data-resource"
+}
