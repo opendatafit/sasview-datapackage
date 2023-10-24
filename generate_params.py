@@ -10,10 +10,12 @@ This script populates:
 
 import os
 import sys
-sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
 
 from sasmodels.sasview_model import load_standard_models
 from sasmodels.weights import MODELS as POLYDISPERSITY_MODELS
+
+# import sas
+sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
 
 
 def diff(list1, list2):
@@ -52,7 +54,7 @@ def base_model_to_param_resource(model):
 
             # If not fittable still acts as fixed variable but should not be
             # able to be selected for fitting
-            fittable = param not in model.non_fittable
+            # fittable = param not in model.non_fittable
 
             # Default all parameters to fixed/non-variable
             vary = False
@@ -296,7 +298,7 @@ def model_to_param_resource(model, polydispersity=False):
 
 if __name__ == "__main__":
     params_resources = []
-    sf_params_resources =[]
+    sf_params_resources = []
 
     # Load all available sasmodels (as SasviewModel classes)
 
@@ -311,15 +313,19 @@ if __name__ == "__main__":
 
     for model in load_standard_models():
         if not model.is_structure_factor:
-            params_resources.append(model_to_param_resource(
-                model(),
-                polydispersity=True,
-            ))
+            params_resources.append(
+                model_to_param_resource(
+                    model(),
+                    polydispersity=True,
+                )
+            )
         else:
-            sf_params_resources.append(model_to_param_resource(
-                model(),
-                polydispersity=False,
-            ))
+            sf_params_resources.append(
+                model_to_param_resource(
+                    model(),
+                    polydispersity=False,
+                )
+            )
 
     # params_output = {
     #     "resourceScaffolds": params_resources,
@@ -337,7 +343,8 @@ if __name__ == "__main__":
     # )
 
     # sf_params_json = json.dumps(sf_params_output, indent=2)
-    # sf_params_json = sf_params_json.replace(": Infinity", ': "Infinity"').replace(
+    # sf_params_json = sf_params_json.replace(": Infinity", ': "Infinity"')
+    # .replace(
     #     ": -Infinity", ': "-Infinity"'
     # )
 
