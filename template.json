@@ -1,0 +1,255 @@
+{
+  "title": "SasView 1D",
+  "description": "SasView 1D data fitter",
+  "algorithms": [
+    {
+      "name": "sasview"
+    }
+  ],
+  "resources": [
+    {
+      "name": "inputData"
+    },
+    {
+      "name": "inputParamsAdsorbedLayer"
+    },
+    {
+      "name": "inputParamsBarbell"
+    },
+    {
+      "name": "inputParamsBCCParacrystal"
+    },
+    {
+      "name": "inputParamsBEPolyelectrolyte"
+    },
+    {
+      "name": "inputParamsBinaryHardSphere"
+    },
+    {
+      "name": "inputParamsBroadPeak"
+    },
+    {
+      "name": "inputParamsCappedCylinder"
+    },
+    {
+      "name": "inputParamsCoreMultiShell"
+    },
+    {
+      "name": "inputParamsCoreShellBicelle"
+    },
+    {
+      "name": "inputParamsCoreShellBicelleElliptical"
+    },
+    {
+      "name": "inputParamsCoreShellBicelleEllipticalBeltRough"
+    },
+    {
+      "name": "inputParamsCoreShellCylinder"
+    },
+    {
+      "name": "inputParamsCoreShellEllipsoid"
+    },
+    {
+      "name": "inputParamsCoreShellParallelepiped"
+    },
+    {
+      "name": "inputParamsCoreShellSphere"
+    },
+    {
+      "name": "inputParamsCorrelationLength"
+    },
+    {
+      "name": "inputParamsCylinder"
+    },
+    {
+      "name": "inputParamsDAB"
+    },
+    {
+      "name": "inputParamsEllipsoid"
+    },
+    {
+      "name": "inputParamsEllipticalCylinder"
+    },
+    {
+      "name": "inputParamsFCCParacrystal"
+    },
+    {
+      "name": "inputParamsFlexibleCylinder"
+    },
+    {
+      "name": "inputParamsFlexibleCylinderElliptical"
+    },
+    {
+      "name": "inputParamsFractal"
+    },
+    {
+      "name": "inputParamsFractalCoreShell"
+    },
+    {
+      "name": "inputParamsFuzzySphere"
+    },
+    {
+      "name": "inputParamsGaussLorentzGel"
+    },
+    {
+      "name": "inputParamsGaussianPeak"
+    },
+    {
+      "name": "inputParamsGelFit"
+    },
+    {
+      "name": "inputParamsGuinier"
+    },
+    {
+      "name": "inputParamsGuinierPorod"
+    },
+    {
+      "name": "inputParamsHollowCylinder"
+    },
+    {
+      "name": "inputParamsHollowRectangularPrism"
+    },
+    {
+      "name": "inputParamsHollowRectangularPrismThinWalls"
+    },
+    {
+      "name": "inputParamsLamellar"
+    },
+    {
+      "name": "inputParamsLamellarHg"
+    },
+    {
+      "name": "inputParamsLamellarHgStackCaille"
+    },
+    {
+      "name": "inputParamsLamellarStackCaille"
+    },
+    {
+      "name": "inputParamsLamellarStackParacrystal"
+    },
+    {
+      "name": "inputParamsLine"
+    },
+    {
+      "name": "inputParamsLinearPearls"
+    },
+    {
+      "name": "inputParamsLorentz"
+    },
+    {
+      "name": "inputParamsMassFractal"
+    },
+    {
+      "name": "inputParamsMassSurfaceFractal"
+    },
+    {
+      "name": "inputParamsMonoGaussCoil"
+    },
+    {
+      "name": "inputParamsMultilayerVesicle"
+    },
+    {
+      "name": "inputParamsOnion"
+    },
+    {
+      "name": "inputParamsParallelepiped"
+    },
+    {
+      "name": "inputParamsPeakLorentz"
+    },
+    {
+      "name": "inputParamsPearlNecklace"
+    },
+    {
+      "name": "inputParamsPolyGaussCoil"
+    },
+    {
+      "name": "inputParamsPolymerExclVolume"
+    },
+    {
+      "name": "inputParamsPolymerMicelle"
+    },
+    {
+      "name": "inputParamsPorod"
+    },
+    {
+      "name": "inputParamsPowerLaw"
+    },
+    {
+      "name": "inputParamsPringle"
+    },
+    {
+      "name": "inputParamsRaspberry"
+    },
+    {
+      "name": "inputParamsRectangularPrism"
+    },
+    {
+      "name": "inputParamsRPA"
+    },
+    {
+      "name": "inputParamsSCParacrystal"
+    },
+    {
+      "name": "inputParamsSphere"
+    },
+    {
+      "name": "inputParamsSphericalSld"
+    },
+    {
+      "name": "inputParamsSpinodal"
+    },
+    {
+      "name": "inputParamsStackedDisks"
+    },
+    {
+      "name": "inputParamsStarPolymer"
+    },
+    {
+      "name": "inputParamsSuperball"
+    },
+    {
+      "name": "inputParamsSurfaceFractal"
+    },
+    {
+      "name": "inputParamsTeubnerStrey"
+    },
+    {
+      "name": "inputParamsTriaxialEllipsoid"
+    },
+    {
+      "name": "inputParamsTwoLorentzian"
+    },
+    {
+      "name": "inputParamsTwoPowerLaw"
+    },
+    {
+      "name": "inputParamsUnifiedPowerRg"
+    },
+    {
+      "name": "inputParamsVesicle"
+    },
+    {
+      "name": "inputSFParamsHardSphere"
+    },
+    {
+      "name": "inputSFParamsHayterMSA"
+    },
+    {
+      "name": "inputSFParamsSquareWell"
+    },
+    {
+      "name": "inputSFParamsStickyHardSphere"
+    }
+  ],
+  "views": [
+    {
+      "name": "upload"
+    }
+  ],
+  "displays": [
+    {
+      "name": "main"
+    }
+  ]
+}

@@ -377,19 +377,30 @@ if __name__ == "__main__":
     with open("./algorithms/sasview.json.template", "r") as f:
         algorithm = json.load(f)
 
-        # Set default resources
-        algorithm["inputs"][0]["resource"] = {
-            "params": DEFAULT_PARAMS_RESOURCE,
-            "sfParams": DEFAULT_SF_PARAMS_RESOURCE,
-            "options": DEFAULT_OPTIONS_RESOURCE,
-        }
+    # Set default resources
+    algorithm["inputs"][0]["resource"] = {
+        "params": DEFAULT_PARAMS_RESOURCE,
+        "sfParams": DEFAULT_SF_PARAMS_RESOURCE,
+        "options": DEFAULT_OPTIONS_RESOURCE,
+    }
 
-        # Populate enums
-        algorithm["inputs"][0]["resources"]["params"] = param_resources
-        algorithm["inputs"][0]["resources"]["sfParams"] = sf_param_resources
-        algorithm["inputs"][0]["resources"]["options"] = []
+    # Populate enums
+    algorithm["inputs"][0]["resources"]["params"] = param_resources
+    algorithm["inputs"][0]["resources"]["sfParams"] = sf_param_resources
+    algorithm["inputs"][0]["resources"]["options"] = []
 
-        with open("./algorithms/sasview.json", "w") as f:
-            json.dump(algorithm, f, indent=2)
+    with open("./algorithms/sasview.json", "w") as f:
+        json.dump(algorithm, f, indent=2)
+
+    # Populate template json
+    with open("./template.json.template", "r") as f:
+        template = json.load(f)
+
+    template["resources"].extend(
+        [{"name": name} for name in param_resources + sf_param_resources]
+    )
+
+    with open("./template.json", "w") as f:
+        json.dump(template, f, indent=2)
 
     print("Done!")
