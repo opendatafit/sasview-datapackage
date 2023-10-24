@@ -1,0 +1,7 @@
+# Match versions in execution-base
+h5py==3.6.0
+lxml==4.8.0
+numpy==1.22.2
+scipy==1.8.0
+bumps==0.9.0
+sasmodels==1.0.5
