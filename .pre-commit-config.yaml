@@ -4,6 +4,7 @@ repos:
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
+        exclude: '(resources|algorithms)'
     -   id: trailing-whitespace
         exclude: '(resources|algorithms)'
 -   repo: https://github.com/psf/black
