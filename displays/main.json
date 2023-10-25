@@ -1,0 +1,35 @@
+{
+  "name": "main",
+  "algorithms": [
+    "sasview"
+  ],
+  "layout": {
+    "type": "bindfit",
+    "spec": {
+      "panes": [
+        {
+          "name": "control",
+          "tabs": [
+            "control"
+          ]
+        },
+        {
+          "name": "main",
+          "tabs": [
+          ]
+        }
+      ],
+      "tabs": [
+        {
+          "name": "control",
+          "title": "Options",
+          "icon": "",
+          "views": [
+            "upload"
+          ],
+          "layout": "stacked"
+        }
+      ]
+    }
+  }
+}

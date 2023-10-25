@@ -1,0 +1,11 @@
+{
+  "name": "inputData",
+  "title": "Input data",
+  "description": "Input data",
+  "profile": "tabular-data-resource",
+  "data": [],
+  "schema": {
+    "primaryKey": "",
+    "fields": []
+  }
+}

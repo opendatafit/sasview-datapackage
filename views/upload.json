@@ -1,0 +1,8 @@
+{
+  "name": "upload",
+  "specType": "opendatafit-upload",
+  "spec": {},
+  "resources": [
+    "inputData"
+  ]
+}
