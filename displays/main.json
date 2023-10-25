@@ -16,6 +16,7 @@
         {
           "name": "main",
           "tabs": [
+            "fit"
           ]
         }
       ],
@@ -28,6 +29,15 @@
             "upload"
           ],
           "layout": "stacked"
+        },
+        {
+          "name": "fit",
+          "title": "Fit",
+          "icon": "",
+          "views": [
+            "fitGraph"
+          ],
+          "layout": "fullbleed"
         }
       ]
     }

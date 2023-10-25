@@ -1,0 +1,748 @@
+{
+  "name": "fitGraph",
+  "spec": {
+    "data": [
+      {
+        "name": "outputFit"
+      },
+      {
+        "name": "outputData",
+        "transform": [
+          {
+            "as": "errorLower",
+            "expr": "datum.y - datum.dy",
+            "type": "formula"
+          },
+          {
+            "as": "errorUpper",
+            "expr": "datum.y + datum.dy",
+            "type": "formula"
+          },
+          {
+            "as": [
+              "yFit",
+              "residuals"
+            ],
+            "key": "x",
+            "from": "outputFit",
+            "type": "lookup",
+            "fields": [
+              "x"
+            ],
+            "values": [
+              "y",
+              "residuals"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "highlightedDataPoint",
+        "source": "outputData",
+        "transform": [
+          {
+            "expr": "hover && hover.datum.x === datum.x && hover.datum.y === datum.y",
+            "type": "filter"
+          }
+        ]
+      },
+      {
+        "name": "highlightedFitPoint",
+        "source": "outputFit",
+        "transform": [
+          {
+            "expr": "hover && hover.datum.x === datum.x",
+            "type": "filter"
+          }
+        ]
+      },
+      {
+        "name": "highlightedResidualsPoint",
+        "source": "outputFit",
+        "transform": [
+          {
+            "expr": "hover && hover.datum.x === datum.x",
+            "type": "filter"
+          }
+        ]
+      }
+    ],
+    "marks": [
+      {
+        "axes": [
+          {
+            "aria": false,
+            "grid": true,
+            "scale": "mainX",
+            "ticks": true,
+            "title": "Q (A^-1)",
+            "domain": false,
+            "labels": true,
+            "orient": "bottom",
+            "zindex": 0,
+            "gridScale": "mainY",
+            "maxExtent": 0,
+            "minExtent": 0,
+            "tickCount": {
+              "signal": "ceil(width/200)"
+            },
+            "titlePadding": 20
+          },
+          {
+            "aria": false,
+            "grid": true,
+            "scale": "mainY",
+            "ticks": true,
+            "title": "I (cm^-1)",
+            "domain": false,
+            "labels": true,
+            "orient": "left",
+            "zindex": 0,
+            "maxExtent": 0,
+            "minExtent": 0,
+            "tickCount": {
+              "signal": "ceil(mainHeight/100)"
+            },
+            "titlePadding": 40
+          }
+        ],
+        "name": "mainGroup",
+        "type": "group",
+        "marks": [
+          {
+            "from": {
+              "data": "outputData"
+            },
+            "name": "dataPlot",
+            "type": "line",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "field": "y",
+                  "scale": "mainY"
+                },
+                "stroke": {
+                  "signal": "dataColor"
+                }
+              }
+            }
+          },
+          {
+            "from": {
+              "data": "outputData"
+            },
+            "name": "dataErrorPlot",
+            "type": "area",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "field": "errorLower",
+                  "scale": "mainY"
+                },
+                "y2": {
+                  "field": "errorUpper",
+                  "scale": "mainY"
+                },
+                "fill": {
+                  "value": "grey"
+                },
+                "fillOpacity": {
+                  "value": 0.3
+                },
+                "interpolate": {
+                  "value": "linear"
+                }
+              }
+            }
+          },
+          {
+            "from": {
+              "data": "outputFit"
+            },
+            "name": "fitPlot",
+            "type": "line",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "field": "y",
+                  "scale": "mainY"
+                },
+                "stroke": {
+                  "signal": "fitColor"
+                }
+              }
+            }
+          },
+          {
+            "from": {
+              "data": "outputData"
+            },
+            "name": "vPoints",
+            "type": "symbol",
+            "encode": {
+              "update": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "value": 0
+                },
+                "fill": {
+                  "value": "transparent"
+                },
+                "size": {
+                  "value": 10
+                },
+                "stroke": {
+                  "value": "transparent"
+                },
+                "strokeWidth": {
+                  "value": 0.5
+                }
+              }
+            }
+          },
+          {
+            "from": {
+              "data": "vPoints"
+            },
+            "name": "vCell",
+            "type": "path",
+            "encode": {
+              "enter": {
+                "fill": {
+                  "value": "transparent"
+                },
+                "stroke": {
+                  "value": "transparent"
+                },
+                "isVoronoi": {
+                  "value": true
+                },
+                "strokeWidth": {
+                  "value": 0.35
+                }
+              },
+              "update": {
+                "tooltip": {
+                  "signal": "datum.datum"
+                }
+              }
+            },
+            "transform": [
+              {
+                "x": "datum.x",
+                "y": "datum.y",
+                "size": [
+                  {
+                    "signal": "width"
+                  },
+                  {
+                    "signal": "height"
+                  }
+                ],
+                "type": "voronoi"
+              }
+            ]
+          },
+          {
+            "from": {
+              "data": "highlightedDataPoint"
+            },
+            "name": "dataPoint",
+            "type": "symbol",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "field": "y",
+                  "scale": "mainY"
+                },
+                "fill": {
+                  "signal": "dataColor"
+                },
+                "size": {
+                  "signal": "pointSize"
+                },
+                "fillOpacity": {
+                  "signal": "pointOpacity"
+                }
+              }
+            },
+            "interactive": false
+          },
+          {
+            "from": {
+              "data": "highlightedFitPoint"
+            },
+            "name": "fitPoint",
+            "type": "symbol",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "mainX"
+                },
+                "y": {
+                  "field": "y",
+                  "scale": "mainY"
+                },
+                "fill": {
+                  "signal": "fitColor"
+                },
+                "size": {
+                  "signal": "pointSize"
+                },
+                "fillOpacity": {
+                  "signal": "pointOpacity"
+                }
+              }
+            },
+            "interactive": false
+          },
+          {
+            "name": "yRule",
+            "type": "rule",
+            "encode": {
+              "update": {
+                "x": {
+                  "scale": "mainX",
+                  "offset": 0.5,
+                  "signal": "xValue"
+                },
+                "y": {
+                  "value": 0
+                },
+                "y2": {
+                  "signal": "yRuleHeightMain"
+                },
+                "stroke": {
+                  "value": "grey"
+                },
+                "opacity": {
+                  "value": 0.5
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                }
+              }
+            },
+            "interactive": false
+          }
+        ],
+        "style": "cell",
+        "encode": {
+          "update": {
+            "width": {
+              "signal": "width"
+            },
+            "height": {
+              "signal": "mainHeight"
+            }
+          }
+        }
+      },
+      {
+        "axes": [
+          {
+            "aria": false,
+            "grid": true,
+            "scale": "subX",
+            "ticks": true,
+            "title": "Residuals",
+            "domain": false,
+            "labels": true,
+            "orient": "bottom",
+            "zindex": 0,
+            "gridScale": "subY",
+            "maxExtent": 0,
+            "minExtent": 0,
+            "tickCount": {
+              "signal": "ceil(width/200)"
+            },
+            "titlePadding": 20
+          },
+          {
+            "aria": false,
+            "grid": true,
+            "scale": "subY",
+            "ticks": true,
+            "title": "I (cm^-1)",
+            "domain": false,
+            "labels": true,
+            "orient": "left",
+            "zindex": 0,
+            "maxExtent": 0,
+            "minExtent": 0,
+            "tickCount": {
+              "signal": "ceil(subHeight/100)"
+            },
+            "titlePadding": 40
+          }
+        ],
+        "name": "subGroup",
+        "type": "group",
+        "marks": [
+          {
+            "clip": true,
+            "from": {
+              "data": "outputFit"
+            },
+            "name": "residualsPlot",
+            "type": "line",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "subX"
+                },
+                "y": {
+                  "field": "residuals",
+                  "scale": "subY"
+                },
+                "stroke": {
+                  "signal": "fitColor"
+                }
+              }
+            }
+          },
+          {
+            "from": {
+              "data": "highlightedResidualsPoint"
+            },
+            "name": "residualsPoint",
+            "type": "symbol",
+            "encode": {
+              "enter": {
+                "x": {
+                  "field": "x",
+                  "scale": "subX"
+                },
+                "y": {
+                  "field": "residuals",
+                  "scale": "subY"
+                },
+                "fill": {
+                  "signal": "fitColor"
+                },
+                "size": {
+                  "signal": "pointSize"
+                },
+                "fillOpacity": {
+                  "signal": "pointOpacity"
+                }
+              }
+            },
+            "interactive": false
+          },
+          {
+            "name": "yRule",
+            "type": "rule",
+            "encode": {
+              "update": {
+                "x": {
+                  "scale": "subX",
+                  "offset": 0.5,
+                  "signal": "xValue"
+                },
+                "y": {
+                  "value": 0
+                },
+                "y2": {
+                  "signal": "yRuleHeightSub"
+                },
+                "stroke": {
+                  "value": "grey"
+                },
+                "opacity": {
+                  "value": 0.5
+                },
+                "strokeWidth": {
+                  "value": 1.5
+                }
+              }
+            },
+            "interactive": false
+          }
+        ],
+        "style": "cell",
+        "encode": {
+          "update": {
+            "width": {
+              "signal": "width"
+            },
+            "height": {
+              "signal": "subHeight"
+            }
+          }
+        }
+      }
+    ],
+    "layout": {
+      "align": "each",
+      "bounds": "full",
+      "columns": 1,
+      "padding": {
+        "signal": "layoutPadding"
+      }
+    },
+    "scales": [
+      {
+        "name": "mainX",
+        "nice": false,
+        "type": "log",
+        "zero": false,
+        "range": [
+          0,
+          {
+            "signal": "width"
+          }
+        ],
+        "domain": {
+          "fields": [
+            {
+              "data": "outputData",
+              "field": "x"
+            },
+            {
+              "data": "outputFit",
+              "field": "x"
+            }
+          ]
+        }
+      },
+      {
+        "name": "mainY",
+        "nice": true,
+        "type": "symlog",
+        "zero": false,
+        "range": [
+          {
+            "signal": "mainHeight"
+          },
+          0
+        ],
+        "round": true,
+        "domain": {
+          "fields": [
+            {
+              "data": "outputData",
+              "field": "y"
+            },
+            {
+              "data": "outputFit",
+              "field": "y"
+            }
+          ]
+        }
+      },
+      {
+        "name": "subX",
+        "nice": false,
+        "type": "log",
+        "zero": false,
+        "range": [
+          0,
+          {
+            "signal": "width"
+          }
+        ],
+        "domain": {
+          "fields": [
+            {
+              "data": "outputData",
+              "field": "x"
+            },
+            {
+              "data": "outputFit",
+              "field": "x"
+            }
+          ]
+        }
+      },
+      {
+        "name": "subY",
+        "nice": true,
+        "type": "symlog",
+        "zero": false,
+        "range": [
+          {
+            "signal": "subHeight"
+          },
+          0
+        ],
+        "round": true,
+        "domain": {
+          "fields": [
+            {
+              "data": "outputFit",
+              "field": "residuals"
+            }
+          ]
+        }
+      }
+    ],
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "signals": [
+      {
+        "on": [
+          {
+            "events": "@vCell:mouseover",
+            "update": "datum"
+          },
+          {
+            "events": "@vCell:mouseout",
+            "update": "null"
+          }
+        ],
+        "name": "hover",
+        "value": null
+      },
+      {
+        "on": [
+          {
+            "events": "window:resize",
+            "update": "isFinite(containerSize()[0]) ? containerSize()[0] : 500"
+          }
+        ],
+        "init": "isFinite(containerSize()[0]) ? containerSize()[0] : 500",
+        "name": "width"
+      },
+      {
+        "on": [
+          {
+            "events": "window:resize",
+            "update": "isFinite(containerSize()[1]) ? containerSize()[1] : 500"
+          }
+        ],
+        "init": "isFinite(containerSize()[1]) ? containerSize()[1] : 500",
+        "name": "height"
+      },
+      {
+        "on": [
+          {
+            "events": "mousemove",
+            "update": "invert('mainX', clamp(x(), 0, width))"
+          }
+        ],
+        "name": "xValue",
+        "value": 0
+      },
+      {
+        "on": [
+          {
+            "events": "@vCell:mousemove",
+            "update": "mainHeight"
+          },
+          {
+            "events": "@vCell:mouseout",
+            "update": "null"
+          }
+        ],
+        "name": "yRuleHeightMain",
+        "value": 0
+      },
+      {
+        "on": [
+          {
+            "events": "@vCell:mousemove",
+            "update": "subHeight"
+          },
+          {
+            "events": "@vCell:mouseout",
+            "update": "null"
+          }
+        ],
+        "name": "yRuleHeightSub",
+        "value": 0
+      },
+      {
+        "on": [
+          {
+            "events": {
+              "type": "resize",
+              "source": "window"
+            },
+            "update": "pluck(data('data'), 'x')"
+          }
+        ],
+        "name": "dataX",
+        "value": 0
+      },
+      {
+        "on": [
+          {
+            "events": "window:resize",
+            "update": "height/1.8"
+          }
+        ],
+        "init": "height/1.8",
+        "name": "mainHeight",
+        "value": "null"
+      },
+      {
+        "on": [
+          {
+            "events": "window:resize",
+            "update": "clamp(height - mainHeight - boxModelOffset, 0, MAX_VALUE)"
+          }
+        ],
+        "init": "clamp(height - mainHeight - boxModelOffset, 0, MAX_VALUE)",
+        "name": "subHeight",
+        "value": "null"
+      },
+      {
+        "name": "layoutPadding",
+        "value": 20
+      },
+      {
+        "init": "layoutPadding * 4 + 15",
+        "name": "boxModelOffset"
+      },
+      {
+        "name": "fitColor",
+        "value": "firebrick"
+      },
+      {
+        "name": "dataColor",
+        "value": "steelblue"
+      },
+      {
+        "on": [
+          {
+            "events": "window:resize",
+            "update": "height/12"
+          }
+        ],
+        "init": "height/12",
+        "name": "pointSize"
+      },
+      {
+        "name": "pointOpacity",
+        "value": 0.8
+      }
+    ],
+    "autosize": "fit"
+  },
+  "specType": "vega",
+  "resources": [
+    "outputData",
+    "outputFit"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "outputFit",
+  "title": "Fit",
+  "description": "Output fit",
+  "profile": "tabular-data-resource",
+  "data": [],
+  "schema": {
+    "primaryKey": "",
+    "fields": []
+  }
+}
