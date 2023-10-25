@@ -11,6 +11,12 @@
       "name": "inputData"
     },
     {
+      "name": "outputData"
+    },
+    {
+      "name": "outputFit"
+    },
+    {
       "name": "inputParamsAdsorbedLayer"
     },
     {
@@ -240,11 +246,17 @@
     },
     {
       "name": "inputSFParamsStickyHardSphere"
+    },
+    {
+      "name": "inputOptions"
     }
   ],
   "views": [
     {
       "name": "upload"
+    },
+    {
+      "name": "fitGraph"
     }
   ],
   "displays": [

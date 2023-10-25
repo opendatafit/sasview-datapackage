@@ -6,6 +6,7 @@ This script populates:
     - ./template.json (from ./template.json.template)
     - ./algorithms/sasview.json (from ./algorithms/sasview.json.template)
     - ./resources/inputParams*.json
+    - ./resources/inputOptions.json
 """
 
 import os
@@ -574,19 +575,23 @@ if __name__ == "__main__":
     with open("./algorithms/sasview.json", "w") as f:
         json.dump(algorithm, f, indent=2)
 
+    # Populate options resource
+    with open("./resources/" + DEFAULT_OPTIONS_RESOURCE + ".json", "w") as f:
+        json.dump(get_options_resource(), f, indent=2)
+
     # Populate template json
     with open("./template.json.template", "r") as f:
         template = json.load(f)
 
+    # Add all parameter resources
     template["resources"].extend(
         [{"name": name} for name in param_resources + sf_param_resources]
     )
 
+    # Add options resource
+    template["resources"].append({"name": DEFAULT_OPTIONS_RESOURCE})
+
     with open("./template.json", "w") as f:
         json.dump(template, f, indent=2)
-
-    # Populate options resource
-    with open("./resources/" + DEFAULT_OPTIONS_RESOURCE + ".json", "w") as f:
-        json.dump(get_options_resource(), f, indent=2)
 
     print("Done!")

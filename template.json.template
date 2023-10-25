@@ -9,11 +9,20 @@
   "resources": [
     {
       "name": "inputData"
+    },
+    {
+      "name": "outputData"
+    },
+    {
+      "name": "outputFit"
     }
   ],
   "views": [
     {
       "name": "upload"
+    },
+    {
+      "name": "fitGraph"
     }
   ],
   "displays": [
