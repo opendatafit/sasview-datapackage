@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "star_polymer",
-      "title": "Star Polymer"
+      "title": "Star Polymer",
+      "category": "Shape-independent"
     }
   },
   "data": {

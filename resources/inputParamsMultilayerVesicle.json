@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "multilayer_vesicle",
-      "title": "Multilayer Vesicle"
+      "title": "Multilayer Vesicle",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

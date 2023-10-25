@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "broad_peak",
-      "title": "Broad Peak"
+      "title": "Broad Peak",
+      "category": "Shape-independent"
     }
   },
   "data": {

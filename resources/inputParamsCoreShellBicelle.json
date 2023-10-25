@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_bicelle",
-      "title": "Core Shell Bicelle"
+      "title": "Core Shell Bicelle",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

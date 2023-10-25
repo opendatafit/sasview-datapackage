@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "lorentz",
-      "title": "Lorentz"
+      "title": "Lorentz",
+      "category": "Shape-independent"
     }
   },
   "data": {

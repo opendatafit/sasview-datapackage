@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "porod",
-      "title": "Porod"
+      "title": "Porod",
+      "category": "Shape-independent"
     }
   },
   "data": {

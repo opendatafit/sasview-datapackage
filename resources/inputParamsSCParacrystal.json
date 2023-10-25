@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "sc_paracrystal",
-      "title": "SC Paracrystal"
+      "title": "SC Paracrystal",
+      "category": "Shape: Paracrystal"
     }
   },
   "data": {

@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_cylinder",
-      "title": "Core Shell Cylinder"
+      "title": "Core Shell Cylinder",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

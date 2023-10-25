@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "mass_surface_fractal",
-      "title": "Mass Surface Fractal"
+      "title": "Mass Surface Fractal",
+      "category": "Shape-independent"
     }
   },
   "data": {

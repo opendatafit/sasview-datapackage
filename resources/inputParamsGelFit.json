@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "gel_fit",
-      "title": "Gel Fit"
+      "title": "Gel Fit",
+      "category": "Shape-independent"
     }
   },
   "data": {

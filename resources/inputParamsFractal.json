@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "fractal",
-      "title": "Fractal"
+      "title": "Fractal",
+      "category": "Shape-independent"
     }
   },
   "data": {

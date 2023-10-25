@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_bicelle_elliptical",
-      "title": "Core Shell Bicelle Elliptical"
+      "title": "Core Shell Bicelle Elliptical",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

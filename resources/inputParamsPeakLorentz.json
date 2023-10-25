@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "peak_lorentz",
-      "title": "Peak Lorentz"
+      "title": "Peak Lorentz",
+      "category": "Shape-independent"
     }
   },
   "data": {

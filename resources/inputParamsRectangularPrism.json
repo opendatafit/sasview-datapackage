@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "rectangular_prism",
-      "title": "Rectangular Prism"
+      "title": "Rectangular Prism",
+      "category": "Shape: Parallelepiped"
     }
   },
   "data": {

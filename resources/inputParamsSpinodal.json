@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "spinodal",
-      "title": "Spinodal"
+      "title": "Spinodal",
+      "category": "Shape-independent"
     }
   },
   "data": {

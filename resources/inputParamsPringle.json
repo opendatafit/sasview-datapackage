@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "pringle",
-      "title": "Pringle"
+      "title": "Pringle",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

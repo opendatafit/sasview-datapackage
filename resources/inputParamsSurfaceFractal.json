@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "surface_fractal",
-      "title": "Surface Fractal"
+      "title": "Surface Fractal",
+      "category": "Shape-independent"
     }
   },
   "data": {

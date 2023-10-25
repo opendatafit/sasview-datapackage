@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "elliptical_cylinder",
-      "title": "Elliptical Cylinder"
+      "title": "Elliptical Cylinder",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

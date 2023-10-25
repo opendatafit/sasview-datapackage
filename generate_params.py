@@ -325,6 +325,7 @@ def base_model_to_param_resource(model):
             "model": {
                 "name": model.name,
                 "title": model_name_to_title(model.name),
+                "category": model_name_to_title(model.category),
             },
         },
         "data": data,

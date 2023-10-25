@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "pearl_necklace",
-      "title": "Pearl Necklace"
+      "title": "Pearl Necklace",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

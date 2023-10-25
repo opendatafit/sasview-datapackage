@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "lamellar_hg",
-      "title": "Lamellar Hg"
+      "title": "Lamellar Hg",
+      "category": "Shape: Lamellae"
     }
   },
   "data": {

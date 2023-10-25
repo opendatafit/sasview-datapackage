@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "hardsphere",
-      "title": "Hard Sphere"
+      "title": "Hard Sphere",
+      "category": "Structure-factor"
     }
   },
   "data": {

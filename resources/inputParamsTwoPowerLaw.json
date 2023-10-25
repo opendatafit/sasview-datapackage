@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "two_power_law",
-      "title": "Two Power Law"
+      "title": "Two Power Law",
+      "category": "Shape-independent"
     }
   },
   "data": {

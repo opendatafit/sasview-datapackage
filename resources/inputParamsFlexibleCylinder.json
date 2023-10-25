@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "flexible_cylinder",
-      "title": "Flexible Cylinder"
+      "title": "Flexible Cylinder",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

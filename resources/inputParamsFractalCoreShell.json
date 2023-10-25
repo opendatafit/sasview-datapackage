@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "fractal_core_shell",
-      "title": "Fractal Core Shell"
+      "title": "Fractal Core Shell",
+      "category": "Shape-independent"
     }
   },
   "data": {

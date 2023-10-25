@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "poly_gauss_coil",
-      "title": "Poly Gauss Coil"
+      "title": "Poly Gauss Coil",
+      "category": "Shape-independent"
     }
   },
   "data": {

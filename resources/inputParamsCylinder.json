@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "cylinder",
-      "title": "Cylinder"
+      "title": "Cylinder",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

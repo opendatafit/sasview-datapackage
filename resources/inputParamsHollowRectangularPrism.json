@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "hollow_rectangular_prism",
-      "title": "Hollow Rectangular Prism"
+      "title": "Hollow Rectangular Prism",
+      "category": "Shape: Parallelepiped"
     }
   },
   "data": {

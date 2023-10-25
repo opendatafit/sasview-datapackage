@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "stacked_disks",
-      "title": "Stacked Disks"
+      "title": "Stacked Disks",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

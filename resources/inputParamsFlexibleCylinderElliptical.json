@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "flexible_cylinder_elliptical",
-      "title": "Flexible Cylinder Elliptical"
+      "title": "Flexible Cylinder Elliptical",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

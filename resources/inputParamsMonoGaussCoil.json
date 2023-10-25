@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "mono_gauss_coil",
-      "title": "Mono Gauss Coil"
+      "title": "Mono Gauss Coil",
+      "category": "Shape-independent"
     }
   },
   "data": {

@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "triaxial_ellipsoid",
-      "title": "Triaxial Ellipsoid"
+      "title": "Triaxial Ellipsoid",
+      "category": "Shape: Ellipsoid"
     }
   },
   "data": {

@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "power_law",
-      "title": "Power Law"
+      "title": "Power Law",
+      "category": "Shape-independent"
     }
   },
   "data": {

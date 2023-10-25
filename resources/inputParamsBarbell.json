@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "barbell",
-      "title": "Barbell"
+      "title": "Barbell",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

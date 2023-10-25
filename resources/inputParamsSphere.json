@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "sphere",
-      "title": "Sphere"
+      "title": "Sphere",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

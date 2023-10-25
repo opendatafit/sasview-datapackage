@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "stickyhardsphere",
-      "title": "Sticky Hard Sphere"
+      "title": "Sticky Hard Sphere",
+      "category": "Structure-factor"
     }
   },
   "data": {

@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_multi_shell",
-      "title": "Core Multi Shell"
+      "title": "Core Multi Shell",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

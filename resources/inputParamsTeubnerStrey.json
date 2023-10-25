@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "teubner_strey",
-      "title": "Teubner Strey"
+      "title": "Teubner Strey",
+      "category": "Shape-independent"
     }
   },
   "data": {

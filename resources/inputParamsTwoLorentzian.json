@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "two_lorentzian",
-      "title": "Two Lorentzian"
+      "title": "Two Lorentzian",
+      "category": "Shape-independent"
     }
   },
   "data": {

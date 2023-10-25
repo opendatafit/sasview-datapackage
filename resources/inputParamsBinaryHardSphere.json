@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "binary_hard_sphere",
-      "title": "Binary Hard Sphere"
+      "title": "Binary Hard Sphere",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

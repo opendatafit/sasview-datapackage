@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "be_polyelectrolyte",
-      "title": "BE Polyelectrolyte"
+      "title": "BE Polyelectrolyte",
+      "category": "Shape-independent"
     }
   },
   "data": {

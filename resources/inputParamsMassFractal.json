@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "mass_fractal",
-      "title": "Mass Fractal"
+      "title": "Mass Fractal",
+      "category": "Shape-independent"
     }
   },
   "data": {

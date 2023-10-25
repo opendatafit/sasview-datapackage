@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_bicelle_elliptical_belt_rough",
-      "title": "Core Shell Bicelle Elliptical Belt Rough"
+      "title": "Core Shell Bicelle Elliptical Belt Rough",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {

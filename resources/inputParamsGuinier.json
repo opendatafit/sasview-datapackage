@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "guinier",
-      "title": "Guinier"
+      "title": "Guinier",
+      "category": "Shape-independent"
     }
   },
   "data": {

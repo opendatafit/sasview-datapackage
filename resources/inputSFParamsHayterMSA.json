@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "hayter_msa",
-      "title": "Hayter MSA"
+      "title": "Hayter MSA",
+      "category": "Structure-factor"
     }
   },
   "data": {

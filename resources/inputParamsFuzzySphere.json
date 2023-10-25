@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "fuzzy_sphere",
-      "title": "Fuzzy Sphere"
+      "title": "Fuzzy Sphere",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

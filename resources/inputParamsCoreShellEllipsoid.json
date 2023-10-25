@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_ellipsoid",
-      "title": "Core Shell Ellipsoid"
+      "title": "Core Shell Ellipsoid",
+      "category": "Shape: Ellipsoid"
     }
   },
   "data": {

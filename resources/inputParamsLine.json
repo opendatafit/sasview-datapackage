@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "line",
-      "title": "Line"
+      "title": "Line",
+      "category": "Shape-independent"
     }
   },
   "data": {

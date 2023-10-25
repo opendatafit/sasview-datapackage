@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "polymer_excl_volume",
-      "title": "Polymer Excl Volume"
+      "title": "Polymer Excl Volume",
+      "category": "Shape-independent"
     }
   },
   "data": {

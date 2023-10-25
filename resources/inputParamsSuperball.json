@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "superball",
-      "title": "Superball"
+      "title": "Superball",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

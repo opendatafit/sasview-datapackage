@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "hollow_rectangular_prism_thin_walls",
-      "title": "Hollow Rectangular Prism Thin Walls"
+      "title": "Hollow Rectangular Prism Thin Walls",
+      "category": "Shape: Parallelepiped"
     }
   },
   "data": {

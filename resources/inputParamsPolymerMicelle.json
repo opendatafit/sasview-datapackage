@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "polymer_micelle",
-      "title": "Polymer Micelle"
+      "title": "Polymer Micelle",
+      "category": "Shape: Sphere"
     }
   },
   "data": {

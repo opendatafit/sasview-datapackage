@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "lamellar_stack_paracrystal",
-      "title": "Lamellar Stack Paracrystal"
+      "title": "Lamellar Stack Paracrystal",
+      "category": "Shape: Lamellae"
     }
   },
   "data": {

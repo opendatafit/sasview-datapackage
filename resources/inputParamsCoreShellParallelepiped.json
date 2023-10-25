@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "core_shell_parallelepiped",
-      "title": "Core Shell Parallelepiped"
+      "title": "Core Shell Parallelepiped",
+      "category": "Shape: Parallelepiped"
     }
   },
   "data": {

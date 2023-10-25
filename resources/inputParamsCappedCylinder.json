@@ -3,7 +3,8 @@
   "metadata": {
     "model": {
       "name": "capped_cylinder",
-      "title": "Capped Cylinder"
+      "title": "Capped Cylinder",
+      "category": "Shape: Cylinder"
     }
   },
   "data": {
