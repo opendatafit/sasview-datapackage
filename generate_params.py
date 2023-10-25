@@ -11,9 +11,11 @@ This script populates:
 import os
 import sys
 import json
+import re
 
 from sasmodels.sasview_model import load_standard_models
 from sasmodels.weights import MODELS as POLYDISPERSITY_MODELS
+import bumps.fitters
 
 # import sas
 sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
@@ -22,6 +24,8 @@ sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
 DEFAULT_PARAMS_RESOURCE = "inputParamsSphere"
 DEFAULT_SF_PARAMS_RESOURCE = None
 DEFAULT_OPTIONS_RESOURCE = None
+
+DEFAULT_OPTIONS_RESOURCE = "inputOptions"
 
 
 def diff(list1, list2):
@@ -37,7 +41,7 @@ def index(lst, key, value):
     return None
 
 
-def make_human_readable(name):
+def model_name_to_title(name):
     # Convenience method for converting model names to human readable titles
     exceptions = {
         "hardsphere": "Hard Sphere",
@@ -59,6 +63,183 @@ def make_human_readable(name):
         return ": ".join([i.capitalize() for i in name.split(":")])
     else:
         return " ".join([i.capitalize() for i in name.split("_")])
+
+
+def fit_method_name_to_title(name):
+    # Convenience method - convert fit method name to human readable title
+    exceptions = {
+        "LevenbergMarquardtFit": "Levenberg-Marquardt Fit",
+    }
+
+    if name in exceptions:
+        return exceptions[name]
+    else:
+        # See https://stackoverflow.com/a/9283563/6412264
+        return re.sub(r"((?<=[a-z])[A-Z]|(?<!\A)[A-Z](?=[a-z]))", r" \1", name)
+
+
+def get_fit_methods():
+    class_list = dir(bumps.fitters)
+
+    def is_fitter(name):
+        if name != "FitBase" and name != "FitDriver":
+            return "Fit" in name
+        return False
+
+    fitter_list = list(filter(is_fitter, class_list))
+
+    # getattr(bumps.fitters, fitter).id
+
+    return [
+        {"name": name, "title": fit_method_name_to_title(name)}
+        for name in fitter_list
+    ]
+
+
+def get_options_resource():
+    # Get list of available fit methods and their titles
+    methods = get_fit_methods()
+
+    # Generate model enum options
+    models = []
+    sf_models = []
+
+    for model in load_standard_models():
+        if model.is_structure_factor:
+            sf_models.append(
+                {
+                    "title": model_name_to_title(model.name),
+                    "name": model.name,
+                }
+            )
+        else:
+            # Enable/disable structure factor selection
+            # Based on sasview logic in perspectives/fitting/basepage.py:2026
+            if (
+                not hasattr(model, "is_form_factor")
+                or not model.is_form_factor
+            ):
+                sf = False
+            else:
+                sf = True
+
+            models.append(
+                {
+                    "title": model_name_to_title(
+                        model.name
+                    ),  # Human readable name
+                    "name": model.name,  # Model key
+                    "category": model_name_to_title(
+                        model.category
+                    ),  # List category
+                    # Enable/disable structure factor selection
+                    "structureFactor": sf,
+                }
+            )
+
+    # Add "None" option for structure factor selection
+    sf_models.append(
+        {
+            "title": "None",
+            "name": "",
+        }
+    )
+
+    # Define schema for options resource
+    fields = [
+        {
+            "name": "method",
+            "title": "Fit method",
+            "description": "The optimisation method to use for fitting",
+            "type": "object",
+            "objectFields": [
+                {
+                    "name": "title",
+                    "type": "string",
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                },
+            ],
+            "constraints": {
+                "enum": methods,
+            },
+        },
+        {
+            "name": "model",
+            "title": "Fit model",
+            "description": "Model to use for fitting",
+            "type": "object",
+            "objectFields": [
+                {
+                    "name": "title",
+                    "type": "string",
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                },
+                {
+                    "name": "category",
+                    "type": "string",
+                    "description": "Model category",
+                },
+                {
+                    "name": "structureFactor",
+                    "type": "string",
+                    "description": (
+                        "Whether structure factor fitting is "
+                        "available for this model"
+                    ),
+                },
+            ],
+            "constraints": {
+                "enum": models,
+            },
+        },
+        {
+            "name": "structureFactor",
+            "title": "Structure factor model",
+            "description": "Structure factor model to fit",
+            "type": "object",
+            "objectFields": [
+                {
+                    "name": "title",
+                    "type": "string",
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                },
+            ],
+            "constraints": {
+                "enum": sf_models,
+            },
+        },
+    ]
+
+    # Default selections
+    # TODO: This will go away, default should be in parameter space selection
+    data = {
+        "method": methods[0],
+        "model": next(i for i in models if i["name"] == "sphere"),
+        "structureFactor": next(
+            i for i in sf_models if i["name"] == "hayter_msa"
+        ),
+    }
+
+    # Build resource
+    resource = {
+        "name": DEFAULT_OPTIONS_RESOURCE,
+        "profile": "opendatafit-options",
+        "data": data,
+        "schema": {
+            "fields": fields,
+        },
+    }
+
+    return resource
 
 
 def base_model_to_param_resource(model):
@@ -139,11 +320,11 @@ def base_model_to_param_resource(model):
         name_prefix = "inputParams"
 
     resource = {
-        "name": name_prefix + make_human_readable(model.name).replace(" ", ""),
+        "name": name_prefix + model_name_to_title(model.name).replace(" ", ""),
         "metadata": {
             "model": {
                 "name": model.name,
-                "title": make_human_readable(model.name),
+                "title": model_name_to_title(model.name),
             },
         },
         "data": data,
@@ -402,5 +583,9 @@ if __name__ == "__main__":
 
     with open("./template.json", "w") as f:
         json.dump(template, f, indent=2)
+
+    # Populate options resource
+    with open("./resources/" + DEFAULT_OPTIONS_RESOURCE + ".json", "w") as f:
+        json.dump(get_options_resource(), f, indent=2)
 
     print("Done!")

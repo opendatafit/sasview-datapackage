@@ -9,7 +9,7 @@
       "resource": {
         "params": "inputParamsSphere",
         "sfParams": null,
-        "options": null
+        "options": "inputOptions"
       },
       "resources": {
         "params": [
