@@ -15,6 +15,9 @@
     },
     {
       "name": "outputFit"
+    },
+    {
+      "name": "outputFitStats"
     }
   ],
   "views": [
@@ -23,6 +26,15 @@
     },
     {
       "name": "fitGraph"
+    },
+    {
+      "name": "fitStatsTable"
+    },
+    {
+      "name": "fitTable"
+    },
+    {
+      "name": "dataTable"
     }
   ],
   "displays": [

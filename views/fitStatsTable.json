@@ -1,0 +1,9 @@
+{
+  "name": "fitStatsTable",
+  "title": "Fit statistics",
+  "spec": {},
+  "specType": "opendatafit-basic-table",
+  "resources": [
+    "outputFitStats"
+  ]
+}

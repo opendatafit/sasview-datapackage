@@ -1,0 +1,30 @@
+{
+  "name": "outputFitStats",
+  "title": "Fit statistics",
+  "description": "Fit statistics",
+  "profile": "tabular-data-resource",
+  "data": [],
+  "schema": {
+    "primaryKey": "chisq",
+    "fields": [
+      {
+        "name": "chisq",
+        "title": "Chi Squared",
+        "unit": "",
+        "type": "number"
+      },
+      {
+        "name": "nllf",
+        "title": "Negative Log Likelihood",
+        "unit": "",
+        "type": "number"
+      },
+      {
+        "name": "dof",
+        "title": "Degrees of Freedom",
+        "unit": "",
+        "type": "number"
+      }
+    ]
+  }
+}

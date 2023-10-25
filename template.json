@@ -17,6 +17,9 @@
       "name": "outputFit"
     },
     {
+      "name": "outputFitStats"
+    },
+    {
       "name": "inputParamsAdsorbedLayer"
     },
     {
@@ -257,6 +260,15 @@
     },
     {
       "name": "fitGraph"
+    },
+    {
+      "name": "fitStatsTable"
+    },
+    {
+      "name": "fitTable"
+    },
+    {
+      "name": "dataTable"
     }
   ],
   "displays": [

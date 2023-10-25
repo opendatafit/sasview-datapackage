@@ -16,7 +16,9 @@
         {
           "name": "main",
           "tabs": [
-            "fit"
+            "fit",
+            "stats",
+            "data"
           ]
         }
       ],
@@ -38,6 +40,25 @@
             "fitGraph"
           ],
           "layout": "fullbleed"
+        },
+        {
+          "name": "stats",
+          "title": "Statistics",
+          "icon": "",
+          "views": [
+            "fitTable"
+          ],
+          "layout": "fullbleed"
+        },
+        {
+          "name": "data",
+          "title": "Data",
+          "icon": "",
+          "views": [
+            "dataTable",
+            "fitTable"
+          ],
+          "layout": "stacked"
         }
       ]
     }
