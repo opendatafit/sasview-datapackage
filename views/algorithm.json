@@ -1,0 +1,19 @@
+{
+  "name": "algorithm",
+  "title": "Algorithm parameters",
+  "specType": "opendatafit-algorithm-params",
+  "algorithm": "sasview",
+  "resources": {
+    "options": {
+      "type": "algorithmOptions"
+    },
+    "input": {
+      "type": "algorithmParams",
+      "name": ["params", "sfParams"]
+    },
+    "output": {
+      "type": "resource",
+      "name": ["outputParams", "outputSFParams"]
+    }
+  }
+}

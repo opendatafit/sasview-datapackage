@@ -20,6 +20,12 @@
       "name": "outputFitStats"
     },
     {
+      "name": "outputParams"
+    },
+    {
+      "name": "outputSFParams"
+    },
+    {
       "name": "inputParamsAdsorbedLayer"
     },
     {
@@ -255,6 +261,9 @@
     }
   ],
   "views": [
+    {
+      "name": "algorithm"
+    },
     {
       "name": "upload"
     },

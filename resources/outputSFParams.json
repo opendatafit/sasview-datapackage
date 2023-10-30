@@ -1,0 +1,9 @@
+{
+  "name": "outputParams",
+  "title": "Optimised structure factor parameters",
+  "description": "Optimised structure factor parameter values",
+  "profile": "parameter-data-resource",
+  "metadata": {},
+  "data": {},
+  "schema": {}
+}

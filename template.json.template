@@ -18,9 +18,18 @@
     },
     {
       "name": "outputFitStats"
+    },
+    {
+      "name": "outputParams"
+    },
+    {
+      "name": "outputSFParams"
     }
   ],
   "views": [
+    {
+      "name": "algorithm"
+    },
     {
       "name": "upload"
     },
