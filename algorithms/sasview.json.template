@@ -6,16 +6,8 @@
     {
       "name": "params",
       "type": "algorithmParams",
-      "resource": {
-        "params": "inputParams",
-        "sfParams": "inputSFParams",
-        "options": "inputOptions"
-      },
-      "resources": {
-        "params": ["inputParams"],
-        "sfParams": ["inputSFParams"],
-        "options": ["inputOptions"]
-      }
+      "parameterSpace": {},
+      "parameterSpaceGroups": []
     },
     {
       "name": "data",

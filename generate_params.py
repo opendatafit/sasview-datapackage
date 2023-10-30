@@ -57,7 +57,6 @@ def model_name_to_title(name):
         "dab": "DAB",
         "shape-independent": "Shape-independent",
     }
-
     if name in exceptions:
         return exceptions[name]
     elif "shape:" in name:
@@ -531,8 +530,8 @@ if __name__ == "__main__":
     # perspectives/fitting/fitproblem.py
     # perspectives/fitting/fitstate.py
 
-    param_resources = []
-    sf_param_resources = []
+    params = []
+    sf_params = []
 
     # Populate resources directory
     for model in load_standard_models():
@@ -544,9 +543,19 @@ if __name__ == "__main__":
         path = "./resources/" + resource["name"] + ".json"
 
         if model().is_structure_factor:
-            sf_param_resources.append(resource["name"])
+            sf_params.append(
+                {
+                    "name": model.name,
+                    "resource": resource,
+                }
+            )
         else:
-            param_resources.append(resource["name"])
+            params.append(
+                {
+                    "name": model.name,
+                    "resource": resource,
+                }
+            )
 
         with open(path, "w") as f:
             # Replace infinite bounds with nulls
@@ -556,28 +565,40 @@ if __name__ == "__main__":
                 .replace(": -Infinity", ": null")
             )
 
+    # Populate options resource
+    with open("./resources/" + DEFAULT_OPTIONS_RESOURCE + ".json", "w") as f:
+        json.dump(get_options_resource(), f, indent=2)
+
     # Populate sasview algorithm json
     with open("./algorithms/sasview.json.template", "r") as f:
         algorithm = json.load(f)
 
-    # Set default resources
-    algorithm["inputs"][0]["resource"] = {
+    # Set default parameterSpace
+    algorithm["inputs"][0]["parameterSpace"] = {
+        # Get name of default params resource
+        "name": next(
+            i["name"]
+            for i in params
+            if i["resource"]["name"] == DEFAULT_PARAMS_RESOURCE
+        ),
         "params": DEFAULT_PARAMS_RESOURCE,
         "sfParams": DEFAULT_SF_PARAMS_RESOURCE,
         "options": DEFAULT_OPTIONS_RESOURCE,
     }
 
-    # Populate enums
-    algorithm["inputs"][0]["resources"]["params"] = param_resources
-    algorithm["inputs"][0]["resources"]["sfParams"] = sf_param_resources
-    algorithm["inputs"][0]["resources"]["options"] = []
+    # Populate parameterSpaceGroups
+    for param in params:
+        algorithm["inputs"][0]["parameterSpaceGroups"].append(
+            {
+                "name": param["name"],
+                "params": param["resource"]["name"],
+                "sfParams": [i["resource"]["name"] for i in sf_params],
+                "options": DEFAULT_OPTIONS_RESOURCE,
+            }
+        )
 
     with open("./algorithms/sasview.json", "w") as f:
         json.dump(algorithm, f, indent=2)
-
-    # Populate options resource
-    with open("./resources/" + DEFAULT_OPTIONS_RESOURCE + ".json", "w") as f:
-        json.dump(get_options_resource(), f, indent=2)
 
     # Populate template json
     with open("./template.json.template", "r") as f:
@@ -585,7 +606,7 @@ if __name__ == "__main__":
 
     # Add all parameter resources
     template["resources"].extend(
-        [{"name": name} for name in param_resources + sf_param_resources]
+        [{"name": param["resource"]["name"]} for param in params + sf_params]
     )
 
     # Add options resource
