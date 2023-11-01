@@ -23,9 +23,7 @@ sys.path.append(os.environ.get("ODF_SASVIEW_SRC") + "/src")
 
 
 DEFAULT_PARAMS_RESOURCE = "inputParamsSphere"
-DEFAULT_SF_PARAMS_RESOURCE = None
-DEFAULT_OPTIONS_RESOURCE = None
-
+DEFAULT_SF_PARAMS_RESOURCE = "inputSFParamsHayterMSA"
 DEFAULT_OPTIONS_RESOURCE = "inputOptions"
 
 

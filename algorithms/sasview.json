@@ -9,7 +9,7 @@
       "parameterSpace": {
         "name": "sphere",
         "params": "inputParamsSphere",
-        "sfParams": null,
+        "sfParams": "inputSFParamsHayterMSA",
         "options": "inputOptions"
       },
       "parameterSpaceGroups": [
