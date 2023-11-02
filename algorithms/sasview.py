@@ -107,7 +107,6 @@ def main(datapackage, params, options, data, outputs, **kwargs):
                 }
             ),
             resource={
-                "name": "data",
                 "schema": {
                     "primaryKey": "x",
                     "fields": [
@@ -233,82 +232,89 @@ def main(datapackage, params, options, data, outputs, **kwargs):
 
     if run_fit:
         best, fbest = fitdriver.fit()
-        # print("====================================================")
-        # import pprint
-        # pprint.pprint(dir(problem.fitness))
-        # pprint.pprint(dir(problem))
-        # print("chisq", problem.chisq())
-        # print("nllf", problem.nllf())
-        # print("cov", problem.cov())
-        # print("dof", problem.dof)
-        # Returns array of stderr corresponding with all fitted params
-        # + something else... see docs
-        # print("stderr", problem.stderr())
-        # print("summarize", problem.summarize())
-        # print("====================================================")
 
-    # Build output fit table
-    # TODO: CHECK CONVERGENCE
-    # (test by setting initial params to something bad - theory() returns NaNs)
-    fit_table = opendatafit.datapackage.dataframe_to_tabular_data_resource(
-        df=pd.DataFrame(
-            data={
-                "x": problem.fitness._data.x.flatten(),
-                "y": problem.fitness.theory().flatten(),
-                "y_raw": problem.fitness._data.y.flatten(),
-                "residuals": problem.fitness.residuals().flatten(),
-            }
-        ),
-        resource={
-            "name": "fit",
-            "schema": {
-                "primaryKey": "x",
-                "fields": [
-                    {
-                        "name": "x",
-                        "type": "number",
-                        "title": data_sas._xaxis,
-                        "unit": data_sas._xunit,
-                    },
-                    {
-                        "name": "y",
-                        "type": "number",
-                        "title": data_sas._yaxis,
-                        "unit": data_sas._yunit,
-                    },
-                    {
-                        "name": "y_raw",
-                        "type": "number",
-                        "title": data_sas._yaxis,
-                        "unit": data_sas._yunit,
-                    },
-                    {
-                        "name": "residuals",
-                        "type": "number",
-                        "title": data_sas._yaxis,
-                        "unit": data_sas._yunit,
-                    },
-                ],
-            },
-        },
+    # Populate datapackage outputs
+    output_data = opendatafit.datapackage.get_algorithm_io_resource(
+        datapackage, "sasview", "output", "data"
+    )
+    output_params = opendatafit.datapackage.get_algorithm_io_resource(
+        datapackage, "sasview", "output", "params"
+    )
+    output_sf_params = opendatafit.datapackage.get_algorithm_io_resource(
+        datapackage, "sasview", "output", "sfParams"
+    )
+    output_fit = opendatafit.datapackage.get_algorithm_io_resource(
+        datapackage, "sasview", "output", "fit"
+    )
+    output_fit_stats = opendatafit.datapackage.get_algorithm_io_resource(
+        datapackage, "sasview", "output", "fitStats"
     )
 
-    # Build output data table
-    data_sas_resource = sasview_data_1d_to_resource(data_sas)
+    # Populate output data table
+    output_data.update(sasview_data_1d_to_resource(data_sas))
+
+    # Populate output fit table
+    # TODO: CHECK CONVERGENCE
+    # (test by setting initial params to something bad - theory() returns NaNs)
+    output_fit.update(
+        opendatafit.datapackage.dataframe_to_tabular_data_resource(
+            df=pd.DataFrame(
+                data={
+                    "x": problem.fitness._data.x.flatten(),
+                    "y": problem.fitness.theory().flatten(),
+                    "y_raw": problem.fitness._data.y.flatten(),
+                    "residuals": problem.fitness.residuals().flatten(),
+                }
+            ),
+            resource={
+                "schema": {
+                    "primaryKey": "x",
+                    "fields": [
+                        {
+                            "name": "x",
+                            "type": "number",
+                            "title": data_sas._xaxis,
+                            "unit": data_sas._xunit,
+                        },
+                        {
+                            "name": "y",
+                            "type": "number",
+                            "title": data_sas._yaxis,
+                            "unit": data_sas._yunit,
+                        },
+                        {
+                            "name": "y_raw",
+                            "type": "number",
+                            "title": data_sas._yaxis,
+                            "unit": data_sas._yunit,
+                        },
+                        {
+                            "name": "residuals",
+                            "type": "number",
+                            "title": data_sas._yaxis,
+                            "unit": data_sas._yunit,
+                        },
+                    ],
+                },
+            },
+        )
+    )
 
     # Build output parameter resources
     if run_fit:
         stderr = problem.stderr()
     else:
         stderr = None
-    fit_model_params = bumps_model_to_parameter_resource(model, params, stderr)
+    output_params.update(
+        bumps_model_to_parameter_resource(model, deepcopy(params), stderr)
+    )
 
     if sf_name:
-        fit_model_sf_params = bumps_model_to_parameter_resource(
-            model, sf_params, stderr
+        output_sf_params.update(
+            bumps_model_to_parameter_resource(
+                model, deepcopy(sf_params), stderr
+            )
         )
-    else:
-        fit_model_sf_params = {}
 
     # Build output fit statistics resource
     if run_fit:
@@ -320,50 +326,23 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         nllf = None
         dof = None
 
-    fit_statistics = {
-        "name": "sas_result_fit_statistics",
-        "title": "Fit statistics",
-        "description": "Goodness of fit statistics",
-        "profile": "parameter-data-resource",
-        "data": {
-            "chisq": {"value": chisq},
-            "nllf": {"value": nllf},
-            "dof": {"value": dof},
-        },
-        "schema": {
-            "keys": [
-                {
-                    "fields": [
-                        {"name": "value", "title": "Value", "type": "number"}
-                    ],
-                    "name": "chisq",
-                    "title": "Chi Squared",
-                    "unit": "",
-                },
-                {
-                    "fields": [
-                        {"name": "value", "title": "Value", "type": "number"}
-                    ],
-                    "name": "nllf",
-                    "title": "Negative Log Likelihood",
-                    "unit": "",
-                },
-                {
-                    "fields": [
-                        {"name": "value", "title": "Value", "type": "number"}
-                    ],
-                    "name": "dof",
-                    "title": "Degrees of Freedom",
-                    "unit": "",
-                },
-            ],
-        },
-    }
+    # TODO: Add cov - problem.cov()
+    # dir(problem.fitness)
+    # problem.summarize()
+    output_fit_stats.update(
+        {
+            "data": {
+                "chisq": {"value": chisq},
+                "nllf": {"value": nllf},
+                "dof": {"value": dof},
+            }
+        }
+    )
 
     return {
-        "result_data": data_sas_resource,
-        "result_fit": fit_table,
-        "result_params": fit_model_params,
-        "result_sf_params": fit_model_sf_params,
-        "result_fit_statistics": fit_statistics,
+        "data": output_data,
+        "fit": output_fit,
+        "params": output_params,
+        "sfParams": output_sf_params,
+        "fitStats": output_fit_stats,
     }

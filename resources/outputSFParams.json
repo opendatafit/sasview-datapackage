@@ -1,5 +1,5 @@
 {
-  "name": "outputParams",
+  "name": "outputSFParams",
   "title": "Optimised structure factor parameters",
   "description": "Optimised structure factor parameter values",
   "profile": "parameter-data-resource",

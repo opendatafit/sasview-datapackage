@@ -22,19 +22,24 @@
       "resource": "outputData"
     },
     {
-      "name": "fit",
-      "type": "resource",
-      "resource": "outputFit"
-    },
-    {
       "name": "params",
       "type": "resource",
       "resource": "outputParams"
     },
     {
-      "name": "stats",
+      "name": "sfParams",
       "type": "resource",
-      "resource": "outputStats"
+      "resource": "outputSFParams"
+    },
+    {
+      "name": "fit",
+      "type": "resource",
+      "resource": "outputFit"
+    },
+    {
+      "name": "fitStats",
+      "type": "resource",
+      "resource": "outputFitStats"
     }
   ]
 }
