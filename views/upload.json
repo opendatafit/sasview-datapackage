@@ -1,6 +1,6 @@
 {
   "name": "upload",
-  "specType": "opendatafit-upload",
+  "specType": "opendatafit-file",
   "spec": {},
   "resources": [
     "inputData"
