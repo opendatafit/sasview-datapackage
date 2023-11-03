@@ -5,15 +5,22 @@
   "algorithm": "sasview",
   "resources": {
     "options": {
-      "type": "algorithmOptions"
+      "type": "algorithmOptions",
+      "name": "options"
     },
     "input": {
       "type": "algorithmParams",
-      "name": ["params", "sfParams"]
+      "name": {
+        "params": "params",
+        "sfParams": "sfParams"
+      }
     },
     "output": {
       "type": "resource",
-      "name": ["outputParams", "outputSFParams"]
+      "name": {
+        "params": "outputParams",
+        "sfParams": "outputSFParams"
+      }
     }
   }
 }
