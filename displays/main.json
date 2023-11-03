@@ -28,7 +28,8 @@
           "title": "Options",
           "icon": "",
           "views": [
-            "upload"
+            "upload",
+            "algorithm"
           ],
           "layout": "stacked"
         },
@@ -46,7 +47,7 @@
           "title": "Statistics",
           "icon": "",
           "views": [
-            "fitTable"
+            "fitStats"
           ],
           "layout": "fullbleed"
         },
