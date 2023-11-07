@@ -172,12 +172,15 @@ def main(datapackage, params, options, data, outputs, **kwargs):
     # sm.data.set_beam_stop(data_sas, 0.008, 0.19)
 
     # Get selected model name
-    model_name = param_space["options"]["data"]["model"]["name"]
-    sf_name = param_space["options"]["data"]["structureFactor"]["name"]
+    model_name = param_space["params"]["metadata"]["model"]["name"]
+    sf_name = None
 
-    if sf_name:
+    try:
+        # sfParams exists
+        sf_name = param_space["sfParams"]["metadata"]["model"]["name"]
         load_name = model_name + "@" + sf_name
-    else:
+    except TypeError:
+        # sfParams is null
         load_name = model_name
 
     kernel = sm.core.load_model(load_name)
