@@ -52,6 +52,11 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         # bumps_model.Model class is a wrapper around sasview_model.Model,
         # containing fitting information on top of model definition
 
+        # Remove any resource names and ids from params object
+        # TODO: Should probably handle this in a more graceful way
+        params.pop("name", None)
+        params.pop("id", None)
+
         # Build dict of fitted params vs. stderr
         # Get array of only fitted parameters
         fit_params = []
