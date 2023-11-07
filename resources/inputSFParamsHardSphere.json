@@ -79,12 +79,6 @@
           }
         ]
       }
-    ],
-    "groups": [
-      {
-        "name": "polydispersity",
-        "title": "Polydispersity"
-      }
     ]
   },
   "profile": "parameter-data-resource"

@@ -533,14 +533,12 @@ if __name__ == "__main__":
 
     # Populate resources directory
     for model in load_standard_models():
-        resource = model_to_param_resource(
-            model(),
-            polydispersity=True,
-        )
-
-        path = "./resources/" + resource["name"] + ".json"
-
         if model().is_structure_factor:
+            resource = model_to_param_resource(
+                model(),
+                polydispersity=False,
+            )
+
             sf_params.append(
                 {
                     "name": model.name,
@@ -548,12 +546,19 @@ if __name__ == "__main__":
                 }
             )
         else:
+            resource = model_to_param_resource(
+                model(),
+                polydispersity=True,
+            )
+
             params.append(
                 {
                     "name": model.name,
                     "resource": resource,
                 }
             )
+
+        path = "./resources/" + resource["name"] + ".json"
 
         with open(path, "w") as f:
             # Replace infinite bounds with nulls
