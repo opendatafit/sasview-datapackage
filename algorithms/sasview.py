@@ -221,10 +221,6 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         # Don't fit if plot_only flag set
         run_fit = False
     else:
-        # TODO
-        # TEMP: Set vary to true to run fit for testing
-        params["data"]["radius"]["vary"] = True
-
         # Are there any parameters to be fitted?
         # (checks if any parameters are set to "vary")
         run_fit = np.any(
