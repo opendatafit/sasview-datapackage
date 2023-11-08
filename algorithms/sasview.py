@@ -26,9 +26,16 @@ def main(datapackage, params, options, data, outputs, **kwargs):
     def parameter_resource_to_bumps_model(kernel, resource):
         # TODO: Need a way to include/exclude PD parameters depending on option
         # selection...
-        params = {
-            key: param["value"] for key, param in resource["data"].items()
-        }
+        params = {}
+
+        for key, param in resource["data"].items():
+            try:
+                # Convert any numbers to floats
+                params[key] = float(param["value"])
+            except ValueError:
+                # Not a number
+                params[key] = param["value"]
+
         model = sm.bumps_model.Model(kernel, **params)
 
         for key, param in resource["data"].items():
@@ -38,8 +45,8 @@ def main(datapackage, params, options, data, outputs, **kwargs):
                     if vary:
                         # (this also sets fixed=False in bumps)
                         getattr(model, key).limits = (
-                            param["lowerBound"],
-                            param["upperBound"],
+                            param.get("lowerBound", None),
+                            param.get("upperBound", None),
                         )
                         getattr(model, key).fixed = False
                     else:
@@ -147,6 +154,9 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         io_name="data",
     )
 
+    if not data["data"]:
+        raise ValueError("No data found - did you upload a data file?")
+
     param_space = opendatafit.datapackage.get_algorithm_io_resource(
         datapackage=datapackage,
         algorithm_name="sasview",
@@ -204,6 +214,8 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         all_params = deepcopy(params)
         all_params["data"].update(sf_params["data"])
         all_params["schema"]["keys"].append(sf_params["schema"]["keys"])
+    else:
+        all_params = params
 
     if kwargs.get("plot_only", False):
         # Don't fit if plot_only flag set
@@ -220,7 +232,7 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         )
 
     # Create bumps model
-    model = parameter_resource_to_bumps_model(kernel, params)
+    model = parameter_resource_to_bumps_model(kernel, all_params)
 
     # Set up bumps fitter
     M = sm.bumps_model.Experiment(data=data_sas, model=model)
