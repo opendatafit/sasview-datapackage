@@ -1,5 +1,6 @@
 {
   "name": "inputParamsTwoPowerLaw",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "two_power_law",

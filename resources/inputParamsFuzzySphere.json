@@ -1,5 +1,6 @@
 {
   "name": "inputParamsFuzzySphere",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "fuzzy_sphere",

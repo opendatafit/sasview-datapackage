@@ -1,5 +1,6 @@
 {
   "name": "inputParamsBinaryHardSphere",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "binary_hard_sphere",

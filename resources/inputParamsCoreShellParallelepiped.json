@@ -1,5 +1,6 @@
 {
   "name": "inputParamsCoreShellParallelepiped",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "core_shell_parallelepiped",

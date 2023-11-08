@@ -1,5 +1,6 @@
 {
   "name": "inputParamsStackedDisks",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "stacked_disks",

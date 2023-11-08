@@ -1,5 +1,6 @@
 {
   "name": "inputParamsSphericalSld",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "spherical_sld",

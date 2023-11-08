@@ -1,5 +1,6 @@
 {
   "name": "inputParamsTriaxialEllipsoid",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "triaxial_ellipsoid",

@@ -1,5 +1,6 @@
 {
   "name": "inputSFParamsStickyHardSphere",
+  "title": "Structure Factor Parameters",
   "metadata": {
     "model": {
       "name": "stickyhardsphere",

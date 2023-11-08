@@ -1,5 +1,6 @@
 {
   "name": "inputParamsCorrelationLength",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "correlation_length",

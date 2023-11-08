@@ -1,5 +1,6 @@
 {
   "name": "inputParamsGelFit",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "gel_fit",

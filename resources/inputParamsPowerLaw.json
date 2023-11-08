@@ -1,5 +1,6 @@
 {
   "name": "inputParamsPowerLaw",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "power_law",

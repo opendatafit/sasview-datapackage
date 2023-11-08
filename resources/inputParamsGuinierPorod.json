@@ -1,5 +1,6 @@
 {
   "name": "inputParamsGuinierPorod",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "guinier_porod",

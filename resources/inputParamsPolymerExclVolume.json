@@ -1,5 +1,6 @@
 {
   "name": "inputParamsPolymerExclVolume",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "polymer_excl_volume",

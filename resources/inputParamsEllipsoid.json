@@ -1,5 +1,6 @@
 {
   "name": "inputParamsEllipsoid",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "ellipsoid",

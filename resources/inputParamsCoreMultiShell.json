@@ -1,5 +1,6 @@
 {
   "name": "inputParamsCoreMultiShell",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "core_multi_shell",

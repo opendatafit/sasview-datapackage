@@ -1,5 +1,6 @@
 {
   "name": "inputParamsGaussianPeak",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "gaussian_peak",

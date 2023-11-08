@@ -1,5 +1,6 @@
 {
   "name": "inputParamsPeakLorentz",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "peak_lorentz",

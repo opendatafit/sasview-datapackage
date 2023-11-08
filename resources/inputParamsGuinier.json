@@ -1,5 +1,6 @@
 {
   "name": "inputParamsGuinier",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "guinier",

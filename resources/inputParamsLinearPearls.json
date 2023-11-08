@@ -1,5 +1,6 @@
 {
   "name": "inputParamsLinearPearls",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "linear_pearls",

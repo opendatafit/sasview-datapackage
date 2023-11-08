@@ -1,5 +1,6 @@
 {
   "name": "inputParamsMonoGaussCoil",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "mono_gauss_coil",

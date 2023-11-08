@@ -1,5 +1,6 @@
 {
   "name": "inputParamsLorentz",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "lorentz",

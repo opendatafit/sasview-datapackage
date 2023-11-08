@@ -1,5 +1,6 @@
 {
   "name": "inputParamsBEPolyelectrolyte",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "be_polyelectrolyte",

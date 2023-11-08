@@ -1,5 +1,6 @@
 {
   "name": "inputParamsGaussLorentzGel",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "gauss_lorentz_gel",

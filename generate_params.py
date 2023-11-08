@@ -314,11 +314,14 @@ def base_model_to_param_resource(model):
 
     if model.is_structure_factor:
         name_prefix = "inputSFParams"
+        title = "Structure Factor Parameters"
     else:
         name_prefix = "inputParams"
+        title = "Model Parameters"
 
     resource = {
         "name": name_prefix + model_name_to_title(model.name).replace(" ", ""),
+        "title": title,
         "metadata": {
             "model": {
                 "name": model.name,

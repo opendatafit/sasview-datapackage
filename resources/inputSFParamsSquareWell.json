@@ -1,5 +1,6 @@
 {
   "name": "inputSFParamsSquareWell",
+  "title": "Structure Factor Parameters",
   "metadata": {
     "model": {
       "name": "squarewell",

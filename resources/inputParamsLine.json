@@ -1,5 +1,6 @@
 {
   "name": "inputParamsLine",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "line",

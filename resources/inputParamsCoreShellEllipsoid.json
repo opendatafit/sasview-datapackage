@@ -1,5 +1,6 @@
 {
   "name": "inputParamsCoreShellEllipsoid",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "core_shell_ellipsoid",

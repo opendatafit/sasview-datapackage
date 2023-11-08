@@ -1,5 +1,6 @@
 {
   "name": "inputParamsAdsorbedLayer",
+  "title": "Model Parameters",
   "metadata": {
     "model": {
       "name": "adsorbed_layer",

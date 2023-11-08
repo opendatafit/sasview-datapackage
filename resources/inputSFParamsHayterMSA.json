@@ -1,5 +1,6 @@
 {
   "name": "inputSFParamsHayterMSA",
+  "title": "Structure Factor Parameters",
   "metadata": {
     "model": {
       "name": "hayter_msa",
