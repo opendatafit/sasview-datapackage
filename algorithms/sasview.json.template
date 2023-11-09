@@ -6,7 +6,24 @@
     {
       "name": "params",
       "type": "algorithmParams",
-      "parameterSpace": {},
+      "parameterSpace": {
+        "name": "",
+        "params": "",
+        "sfParams": "",
+        "options": ""
+      },
+      "parameterSpaceMetadata": {
+        "title": "Model",
+        "params": {
+          "title": "Form Factor Model"
+        },
+        "sfParams": {
+          "title": "Structure Factor Model"
+        },
+        "options": {
+          "title": "Options"
+        }
+      },
       "parameterSpaceGroups": []
     },
     {

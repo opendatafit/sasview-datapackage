@@ -16,6 +16,18 @@
             "sfParams": "inputSFParamsHayterMSA",
             "options": "inputOptions"
           },
+          "parameterSpaceMetadata": {
+            "title": "Model",
+            "params": {
+              "title": "Form Factor Model"
+            },
+            "sfParams": {
+              "title": "Structure Factor Model"
+            },
+            "options": {
+              "title": "Options"
+            }
+          },
           "parameterSpaceGroups": [
             {
               "name": "adsorbed_layer",
