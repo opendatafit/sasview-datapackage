@@ -347,11 +347,13 @@ def main(datapackage, params, options, data, outputs, **kwargs):
     # problem.summarize()
     output_fit_stats.update(
         {
-            "data": {
-                "chisq": {"value": chisq},
-                "nllf": {"value": nllf},
-                "dof": {"value": dof},
-            }
+            "data": [
+                {
+                    "chisq": chisq,
+                    "nllf": nllf,
+                    "dof": dof,
+                },
+            ],
         }
     )
 

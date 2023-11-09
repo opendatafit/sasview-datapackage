@@ -2,7 +2,7 @@
   "name": "fitStats",
   "title": "Fit statistics",
   "spec": {},
-  "specType": "parameter-data-resource",
+  "specType": "opendatafit-basic-table",
   "resources": [
     "outputFitStats"
   ]

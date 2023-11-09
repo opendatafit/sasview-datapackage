@@ -2,45 +2,28 @@
   "name": "outputFitStats",
   "title": "Fit statistics",
   "description": "Goodness of fit statistics",
-  "profile": "parameter-data-resource",
-  "data": {},
+  "profile": "tabular-data-resource",
+  "data": [],
   "schema": {
-    "keys": [
+    "primaryKey": "chisq",
+    "fields": [
       {
-        "fields": [
-          {
-            "name": "value",
-            "title": "Value",
-            "type": "number"
-          }
-        ],
         "name": "chisq",
         "title": "Chi Squared",
-        "unit": ""
+        "unit": "",
+        "type": "number"
       },
       {
-        "fields": [
-          {
-            "name": "value",
-            "title": "Value",
-            "type": "number"
-          }
-        ],
         "name": "nllf",
         "title": "Negative Log Likelihood",
-        "unit": ""
+        "unit": "",
+        "type": "number"
       },
       {
-        "fields": [
-          {
-            "name": "value",
-            "title": "Value",
-            "type": "number"
-          }
-        ],
         "name": "dof",
         "title": "Degrees of Freedom",
-        "unit": ""
+        "unit": "",
+        "type": "number"
       }
     ]
   }
