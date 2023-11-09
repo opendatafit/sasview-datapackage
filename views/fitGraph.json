@@ -115,7 +115,6 @@
             },
             "name": "dataPlot",
             "type": "symbol",
-            "type": "path",
             "encode": {
               "enter": {
                 "x": {
@@ -125,15 +124,6 @@
                 "y": {
                   "field": "y",
                   "scale": "mainY"
-                },
-                "path": {
-                  "value": "M-1,-1 L1,1 M1,-1 L-1,1 Z"
-                },
-                "scaleX": {
-                  "value": 5
-                },
-                "scaleY": {
-                  "value": 5
                 },
                 "shape": {
                   "signal": "pointShape"

@@ -43413,7 +43413,7 @@
                   "data": "outputData"
                 },
                 "name": "dataPlot",
-                "type": "line",
+                "type": "symbol",
                 "encode": {
                   "enter": {
                     "x": {
@@ -43424,8 +43424,17 @@
                       "field": "y",
                       "scale": "mainY"
                     },
+                    "shape": {
+                      "signal": "pointShape"
+                    },
+                    "size": {
+                      "signal": "pointSize"
+                    },
                     "stroke": {
                       "signal": "dataColor"
+                    },
+                    "strokeWidth": {
+                      "value": 1
                     }
                   }
                 }
@@ -43435,12 +43444,15 @@
                   "data": "outputData"
                 },
                 "name": "dataErrorPlot",
-                "type": "area",
+                "type": "rect",
                 "encode": {
                   "enter": {
-                    "x": {
+                    "xc": {
                       "field": "x",
                       "scale": "mainX"
+                    },
+                    "width": {
+                      "value": 1
                     },
                     "y": {
                       "field": "errorLower",
@@ -43451,13 +43463,75 @@
                       "scale": "mainY"
                     },
                     "fill": {
-                      "value": "grey"
+                      "value": "black"
+                    }
+                  }
+                }
+              },
+              {
+                "from": {
+                  "data": "outputData"
+                },
+                "name": "dataErrorCapUpper",
+                "type": "symbol",
+                "encode": {
+                  "enter": {
+                    "x": {
+                      "field": "x",
+                      "scale": "mainX"
                     },
-                    "fillOpacity": {
-                      "value": 0.3
+                    "y": {
+                      "field": "errorUpper",
+                      "scale": "mainY"
                     },
-                    "interpolate": {
-                      "value": "linear"
+                    "fill": {
+                      "value": "red"
+                    },
+                    "shape": {
+                      "value": "stroke"
+                    },
+                    "size": {
+                      "signal": "pointSize"
+                    },
+                    "stroke": {
+                      "signal": "dataColor"
+                    },
+                    "strokeWidth": {
+                      "value": 1
+                    }
+                  }
+                }
+              },
+              {
+                "from": {
+                  "data": "outputData"
+                },
+                "name": "dataErrorCapLower",
+                "type": "symbol",
+                "encode": {
+                  "enter": {
+                    "x": {
+                      "field": "x",
+                      "scale": "mainX"
+                    },
+                    "y": {
+                      "field": "errorLower",
+                      "scale": "mainY"
+                    },
+                    "fill": {
+                      "value": "red"
+                    },
+                    "shape": {
+                      "value": "stroke"
+                    },
+                    "size": {
+                      "signal": "pointSize"
+                    },
+                    "stroke": {
+                      "signal": "dataColor"
+                    },
+                    "strokeWidth": {
+                      "value": 1
                     }
                   }
                 }
@@ -43480,6 +43554,9 @@
                     },
                     "stroke": {
                       "signal": "fitColor"
+                    },
+                    "strokeWidth": {
+                      "value": 1
                     }
                   }
                 }
@@ -43573,6 +43650,9 @@
                       "field": "y",
                       "scale": "mainY"
                     },
+                    "shape": {
+                      "signal": "pointShape"
+                    },
                     "fill": {
                       "signal": "dataColor"
                     },
@@ -43601,6 +43681,9 @@
                     "y": {
                       "field": "y",
                       "scale": "mainY"
+                    },
+                    "shape": {
+                      "signal": "pointShape"
                     },
                     "fill": {
                       "signal": "fitColor"
@@ -43638,7 +43721,7 @@
                       "value": 0.5
                     },
                     "strokeWidth": {
-                      "value": 1.5
+                      "value": 1
                     }
                   }
                 },
@@ -43717,6 +43800,9 @@
                     },
                     "stroke": {
                       "signal": "fitColor"
+                    },
+                    "strokeWidth": {
+                      "value": 1
                     }
                   }
                 }
@@ -43736,6 +43822,9 @@
                     "y": {
                       "field": "residuals",
                       "scale": "subY"
+                    },
+                    "shape": {
+                      "signal": "pointShape"
                     },
                     "fill": {
                       "signal": "fitColor"
@@ -44020,7 +44109,11 @@
           },
           {
             "name": "dataColor",
-            "value": "steelblue"
+            "value": "black"
+          },
+          {
+            "name": "pointShape",
+            "value": "diamond"
           },
           {
             "on": [
