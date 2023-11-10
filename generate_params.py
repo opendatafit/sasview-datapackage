@@ -98,51 +98,6 @@ def get_options_resource():
     # Get list of available fit methods and their titles
     methods = get_fit_methods()
 
-    # Generate model enum options
-    models = []
-    sf_models = []
-
-    for model in load_standard_models():
-        if model.is_structure_factor:
-            sf_models.append(
-                {
-                    "title": model_name_to_title(model.name),
-                    "name": model.name,
-                }
-            )
-        else:
-            # Enable/disable structure factor selection
-            # Based on sasview logic in perspectives/fitting/basepage.py:2026
-            if (
-                not hasattr(model, "is_form_factor")
-                or not model.is_form_factor
-            ):
-                sf = False
-            else:
-                sf = True
-
-            models.append(
-                {
-                    "title": model_name_to_title(
-                        model.name
-                    ),  # Human readable name
-                    "name": model.name,  # Model key
-                    "category": model_name_to_title(
-                        model.category
-                    ),  # List category
-                    # Enable/disable structure factor selection
-                    "structureFactor": sf,
-                }
-            )
-
-    # Add "None" option for structure factor selection
-    sf_models.append(
-        {
-            "title": "None",
-            "name": "",
-        }
-    )
-
     # Define schema for options resource
     fields = [
         {
@@ -164,67 +119,11 @@ def get_options_resource():
                 "enum": methods,
             },
         },
-        {
-            "name": "model",
-            "title": "Fit model",
-            "description": "Model to use for fitting",
-            "type": "object",
-            "objectFields": [
-                {
-                    "name": "title",
-                    "type": "string",
-                },
-                {
-                    "name": "name",
-                    "type": "string",
-                },
-                {
-                    "name": "category",
-                    "type": "string",
-                    "description": "Model category",
-                },
-                {
-                    "name": "structureFactor",
-                    "type": "string",
-                    "description": (
-                        "Whether structure factor fitting is "
-                        "available for this model"
-                    ),
-                },
-            ],
-            "constraints": {
-                "enum": models,
-            },
-        },
-        {
-            "name": "structureFactor",
-            "title": "Structure factor model",
-            "description": "Structure factor model to fit",
-            "type": "object",
-            "objectFields": [
-                {
-                    "name": "title",
-                    "type": "string",
-                },
-                {
-                    "name": "name",
-                    "type": "string",
-                },
-            ],
-            "constraints": {
-                "enum": sf_models,
-            },
-        },
     ]
 
     # Default selections
-    # TODO: This will go away, default should be in parameter space selection
     data = {
         "method": methods[0],
-        "model": next(i for i in models if i["name"] == "sphere"),
-        "structureFactor": next(
-            i for i in sf_models if i["name"] == "hayter_msa"
-        ),
     }
 
     # Build resource
