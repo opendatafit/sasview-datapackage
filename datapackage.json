@@ -12,6 +12,7 @@
           "type": "algorithmParams",
           "parameterSpace": {
             "name": "sphere",
+            "title": "Sphere",
             "params": "inputParamsSphere",
             "sfParams": "inputSFParamsHayterMSA",
             "options": "inputOptions"
@@ -31,11 +32,13 @@
           "parameterSpaceGroups": [
             {
               "name": "adsorbed_layer",
+              "title": "Adsorbed Layer",
               "params": "inputParamsAdsorbedLayer",
               "options": "inputOptions"
             },
             {
               "name": "barbell",
+              "title": "Barbell",
               "params": "inputParamsBarbell",
               "options": "inputOptions",
               "sfParams": [
@@ -47,26 +50,31 @@
             },
             {
               "name": "bcc_paracrystal",
+              "title": "BCC Paracrystal",
               "params": "inputParamsBCCParacrystal",
               "options": "inputOptions"
             },
             {
               "name": "be_polyelectrolyte",
+              "title": "BE Polyelectrolyte",
               "params": "inputParamsBEPolyelectrolyte",
               "options": "inputOptions"
             },
             {
               "name": "binary_hard_sphere",
+              "title": "Binary Hard Sphere",
               "params": "inputParamsBinaryHardSphere",
               "options": "inputOptions"
             },
             {
               "name": "broad_peak",
+              "title": "Broad Peak",
               "params": "inputParamsBroadPeak",
               "options": "inputOptions"
             },
             {
               "name": "capped_cylinder",
+              "title": "Capped Cylinder",
               "params": "inputParamsCappedCylinder",
               "options": "inputOptions",
               "sfParams": [
@@ -78,6 +86,7 @@
             },
             {
               "name": "core_multi_shell",
+              "title": "Core Multi Shell",
               "params": "inputParamsCoreMultiShell",
               "options": "inputOptions",
               "sfParams": [
@@ -89,6 +98,7 @@
             },
             {
               "name": "core_shell_bicelle",
+              "title": "Core Shell Bicelle",
               "params": "inputParamsCoreShellBicelle",
               "options": "inputOptions",
               "sfParams": [
@@ -100,6 +110,7 @@
             },
             {
               "name": "core_shell_bicelle_elliptical",
+              "title": "Core Shell Bicelle Elliptical",
               "params": "inputParamsCoreShellBicelleElliptical",
               "options": "inputOptions",
               "sfParams": [
@@ -111,6 +122,7 @@
             },
             {
               "name": "core_shell_bicelle_elliptical_belt_rough",
+              "title": "Core Shell Bicelle Elliptical Belt Rough",
               "params": "inputParamsCoreShellBicelleEllipticalBeltRough",
               "options": "inputOptions",
               "sfParams": [
@@ -122,6 +134,7 @@
             },
             {
               "name": "core_shell_cylinder",
+              "title": "Core Shell Cylinder",
               "params": "inputParamsCoreShellCylinder",
               "options": "inputOptions",
               "sfParams": [
@@ -133,6 +146,7 @@
             },
             {
               "name": "core_shell_ellipsoid",
+              "title": "Core Shell Ellipsoid",
               "params": "inputParamsCoreShellEllipsoid",
               "options": "inputOptions",
               "sfParams": [
@@ -144,6 +158,7 @@
             },
             {
               "name": "core_shell_parallelepiped",
+              "title": "Core Shell Parallelepiped",
               "params": "inputParamsCoreShellParallelepiped",
               "options": "inputOptions",
               "sfParams": [
@@ -155,6 +170,7 @@
             },
             {
               "name": "core_shell_sphere",
+              "title": "Core Shell Sphere",
               "params": "inputParamsCoreShellSphere",
               "options": "inputOptions",
               "sfParams": [
@@ -166,11 +182,13 @@
             },
             {
               "name": "correlation_length",
+              "title": "Correlation Length",
               "params": "inputParamsCorrelationLength",
               "options": "inputOptions"
             },
             {
               "name": "cylinder",
+              "title": "Cylinder",
               "params": "inputParamsCylinder",
               "options": "inputOptions",
               "sfParams": [
@@ -182,11 +200,13 @@
             },
             {
               "name": "dab",
+              "title": "DAB",
               "params": "inputParamsDAB",
               "options": "inputOptions"
             },
             {
               "name": "ellipsoid",
+              "title": "Ellipsoid",
               "params": "inputParamsEllipsoid",
               "options": "inputOptions",
               "sfParams": [
@@ -198,6 +218,7 @@
             },
             {
               "name": "elliptical_cylinder",
+              "title": "Elliptical Cylinder",
               "params": "inputParamsEllipticalCylinder",
               "options": "inputOptions",
               "sfParams": [
@@ -209,31 +230,37 @@
             },
             {
               "name": "fcc_paracrystal",
+              "title": "FCC Paracrystal",
               "params": "inputParamsFCCParacrystal",
               "options": "inputOptions"
             },
             {
               "name": "flexible_cylinder",
+              "title": "Flexible Cylinder",
               "params": "inputParamsFlexibleCylinder",
               "options": "inputOptions"
             },
             {
               "name": "flexible_cylinder_elliptical",
+              "title": "Flexible Cylinder Elliptical",
               "params": "inputParamsFlexibleCylinderElliptical",
               "options": "inputOptions"
             },
             {
               "name": "fractal",
+              "title": "Fractal",
               "params": "inputParamsFractal",
               "options": "inputOptions"
             },
             {
               "name": "fractal_core_shell",
+              "title": "Fractal Core Shell",
               "params": "inputParamsFractalCoreShell",
               "options": "inputOptions"
             },
             {
               "name": "fuzzy_sphere",
+              "title": "Fuzzy Sphere",
               "params": "inputParamsFuzzySphere",
               "options": "inputOptions",
               "sfParams": [
@@ -245,31 +272,37 @@
             },
             {
               "name": "gauss_lorentz_gel",
+              "title": "Gauss Lorentz Gel",
               "params": "inputParamsGaussLorentzGel",
               "options": "inputOptions"
             },
             {
               "name": "gaussian_peak",
+              "title": "Gaussian Peak",
               "params": "inputParamsGaussianPeak",
               "options": "inputOptions"
             },
             {
               "name": "gel_fit",
+              "title": "Gel Fit",
               "params": "inputParamsGelFit",
               "options": "inputOptions"
             },
             {
               "name": "guinier",
+              "title": "Guinier",
               "params": "inputParamsGuinier",
               "options": "inputOptions"
             },
             {
               "name": "guinier_porod",
+              "title": "Guinier Porod",
               "params": "inputParamsGuinierPorod",
               "options": "inputOptions"
             },
             {
               "name": "hollow_cylinder",
+              "title": "Hollow Cylinder",
               "params": "inputParamsHollowCylinder",
               "options": "inputOptions",
               "sfParams": [
@@ -281,6 +314,7 @@
             },
             {
               "name": "hollow_rectangular_prism",
+              "title": "Hollow Rectangular Prism",
               "params": "inputParamsHollowRectangularPrism",
               "options": "inputOptions",
               "sfParams": [
@@ -292,6 +326,7 @@
             },
             {
               "name": "hollow_rectangular_prism_thin_walls",
+              "title": "Hollow Rectangular Prism Thin Walls",
               "params": "inputParamsHollowRectangularPrismThinWalls",
               "options": "inputOptions",
               "sfParams": [
@@ -303,56 +338,67 @@
             },
             {
               "name": "lamellar",
+              "title": "Lamellar",
               "params": "inputParamsLamellar",
               "options": "inputOptions"
             },
             {
               "name": "lamellar_hg",
+              "title": "Lamellar Hg",
               "params": "inputParamsLamellarHg",
               "options": "inputOptions"
             },
             {
               "name": "lamellar_hg_stack_caille",
+              "title": "Lamellar Hg Stack Caille",
               "params": "inputParamsLamellarHgStackCaille",
               "options": "inputOptions"
             },
             {
               "name": "lamellar_stack_caille",
+              "title": "Lamellar Stack Caille",
               "params": "inputParamsLamellarStackCaille",
               "options": "inputOptions"
             },
             {
               "name": "lamellar_stack_paracrystal",
+              "title": "Lamellar Stack Paracrystal",
               "params": "inputParamsLamellarStackParacrystal",
               "options": "inputOptions"
             },
             {
               "name": "line",
+              "title": "Line",
               "params": "inputParamsLine",
               "options": "inputOptions"
             },
             {
               "name": "linear_pearls",
+              "title": "Linear Pearls",
               "params": "inputParamsLinearPearls",
               "options": "inputOptions"
             },
             {
               "name": "lorentz",
+              "title": "Lorentz",
               "params": "inputParamsLorentz",
               "options": "inputOptions"
             },
             {
               "name": "mass_fractal",
+              "title": "Mass Fractal",
               "params": "inputParamsMassFractal",
               "options": "inputOptions"
             },
             {
               "name": "mass_surface_fractal",
+              "title": "Mass Surface Fractal",
               "params": "inputParamsMassSurfaceFractal",
               "options": "inputOptions"
             },
             {
               "name": "mono_gauss_coil",
+              "title": "Mono Gauss Coil",
               "params": "inputParamsMonoGaussCoil",
               "options": "inputOptions",
               "sfParams": [
@@ -364,6 +410,7 @@
             },
             {
               "name": "multilayer_vesicle",
+              "title": "Multilayer Vesicle",
               "params": "inputParamsMultilayerVesicle",
               "options": "inputOptions",
               "sfParams": [
@@ -375,6 +422,7 @@
             },
             {
               "name": "onion",
+              "title": "Onion",
               "params": "inputParamsOnion",
               "options": "inputOptions",
               "sfParams": [
@@ -386,6 +434,7 @@
             },
             {
               "name": "parallelepiped",
+              "title": "Parallelepiped",
               "params": "inputParamsParallelepiped",
               "options": "inputOptions",
               "sfParams": [
@@ -397,11 +446,13 @@
             },
             {
               "name": "peak_lorentz",
+              "title": "Peak Lorentz",
               "params": "inputParamsPeakLorentz",
               "options": "inputOptions"
             },
             {
               "name": "pearl_necklace",
+              "title": "Pearl Necklace",
               "params": "inputParamsPearlNecklace",
               "options": "inputOptions",
               "sfParams": [
@@ -413,31 +464,37 @@
             },
             {
               "name": "poly_gauss_coil",
+              "title": "Poly Gauss Coil",
               "params": "inputParamsPolyGaussCoil",
               "options": "inputOptions"
             },
             {
               "name": "polymer_excl_volume",
+              "title": "Polymer Excl Volume",
               "params": "inputParamsPolymerExclVolume",
               "options": "inputOptions"
             },
             {
               "name": "polymer_micelle",
+              "title": "Polymer Micelle",
               "params": "inputParamsPolymerMicelle",
               "options": "inputOptions"
             },
             {
               "name": "porod",
+              "title": "Porod",
               "params": "inputParamsPorod",
               "options": "inputOptions"
             },
             {
               "name": "power_law",
+              "title": "Power Law",
               "params": "inputParamsPowerLaw",
               "options": "inputOptions"
             },
             {
               "name": "pringle",
+              "title": "Pringle",
               "params": "inputParamsPringle",
               "options": "inputOptions",
               "sfParams": [
@@ -449,6 +506,7 @@
             },
             {
               "name": "raspberry",
+              "title": "Raspberry",
               "params": "inputParamsRaspberry",
               "options": "inputOptions",
               "sfParams": [
@@ -460,6 +518,7 @@
             },
             {
               "name": "rectangular_prism",
+              "title": "Rectangular Prism",
               "params": "inputParamsRectangularPrism",
               "options": "inputOptions",
               "sfParams": [
@@ -471,16 +530,19 @@
             },
             {
               "name": "rpa",
+              "title": "RPA",
               "params": "inputParamsRPA",
               "options": "inputOptions"
             },
             {
               "name": "sc_paracrystal",
+              "title": "SC Paracrystal",
               "params": "inputParamsSCParacrystal",
               "options": "inputOptions"
             },
             {
               "name": "sphere",
+              "title": "Sphere",
               "params": "inputParamsSphere",
               "options": "inputOptions",
               "sfParams": [
@@ -492,6 +554,7 @@
             },
             {
               "name": "spherical_sld",
+              "title": "Spherical Sld",
               "params": "inputParamsSphericalSld",
               "options": "inputOptions",
               "sfParams": [
@@ -503,21 +566,25 @@
             },
             {
               "name": "spinodal",
+              "title": "Spinodal",
               "params": "inputParamsSpinodal",
               "options": "inputOptions"
             },
             {
               "name": "stacked_disks",
+              "title": "Stacked Disks",
               "params": "inputParamsStackedDisks",
               "options": "inputOptions"
             },
             {
               "name": "star_polymer",
+              "title": "Star Polymer",
               "params": "inputParamsStarPolymer",
               "options": "inputOptions"
             },
             {
               "name": "superball",
+              "title": "Superball",
               "params": "inputParamsSuperball",
               "options": "inputOptions",
               "sfParams": [
@@ -529,16 +596,19 @@
             },
             {
               "name": "surface_fractal",
+              "title": "Surface Fractal",
               "params": "inputParamsSurfaceFractal",
               "options": "inputOptions"
             },
             {
               "name": "teubner_strey",
+              "title": "Teubner Strey",
               "params": "inputParamsTeubnerStrey",
               "options": "inputOptions"
             },
             {
               "name": "triaxial_ellipsoid",
+              "title": "Triaxial Ellipsoid",
               "params": "inputParamsTriaxialEllipsoid",
               "options": "inputOptions",
               "sfParams": [
@@ -550,21 +620,25 @@
             },
             {
               "name": "two_lorentzian",
+              "title": "Two Lorentzian",
               "params": "inputParamsTwoLorentzian",
               "options": "inputOptions"
             },
             {
               "name": "two_power_law",
+              "title": "Two Power Law",
               "params": "inputParamsTwoPowerLaw",
               "options": "inputOptions"
             },
             {
               "name": "unified_power_Rg",
+              "title": "Unified Power Rg",
               "params": "inputParamsUnifiedPowerRg",
               "options": "inputOptions"
             },
             {
               "name": "vesicle",
+              "title": "Vesicle",
               "params": "inputParamsVesicle",
               "options": "inputOptions",
               "sfParams": [

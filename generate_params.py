@@ -497,6 +497,11 @@ if __name__ == "__main__":
             for i in params
             if i["resource"]["name"] == DEFAULT_PARAMS_RESOURCE
         ),
+        "title": next(
+            i["resource"]["metadata"]["model"]["title"]
+            for i in params
+            if i["resource"]["name"] == DEFAULT_PARAMS_RESOURCE
+        ),
         "params": DEFAULT_PARAMS_RESOURCE,
         "sfParams": DEFAULT_SF_PARAMS_RESOURCE,
         "options": DEFAULT_OPTIONS_RESOURCE,
@@ -506,6 +511,7 @@ if __name__ == "__main__":
     for param in params:
         parameter_space_group = {
             "name": param["name"],
+            "title": param["resource"]["metadata"]["model"]["title"],
             "params": param["resource"]["name"],
             "options": DEFAULT_OPTIONS_RESOURCE,
         }
