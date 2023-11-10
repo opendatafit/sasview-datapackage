@@ -28,805 +28,547 @@
         {
           "name": "adsorbed_layer",
           "params": "inputParamsAdsorbedLayer",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "barbell",
           "params": "inputParamsBarbell",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "bcc_paracrystal",
           "params": "inputParamsBCCParacrystal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "be_polyelectrolyte",
           "params": "inputParamsBEPolyelectrolyte",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "binary_hard_sphere",
           "params": "inputParamsBinaryHardSphere",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "broad_peak",
           "params": "inputParamsBroadPeak",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "capped_cylinder",
           "params": "inputParamsCappedCylinder",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_multi_shell",
           "params": "inputParamsCoreMultiShell",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_bicelle",
           "params": "inputParamsCoreShellBicelle",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_bicelle_elliptical",
           "params": "inputParamsCoreShellBicelleElliptical",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_bicelle_elliptical_belt_rough",
           "params": "inputParamsCoreShellBicelleEllipticalBeltRough",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_cylinder",
           "params": "inputParamsCoreShellCylinder",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_ellipsoid",
           "params": "inputParamsCoreShellEllipsoid",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_parallelepiped",
           "params": "inputParamsCoreShellParallelepiped",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "core_shell_sphere",
           "params": "inputParamsCoreShellSphere",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "correlation_length",
           "params": "inputParamsCorrelationLength",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "cylinder",
           "params": "inputParamsCylinder",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "dab",
           "params": "inputParamsDAB",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "ellipsoid",
           "params": "inputParamsEllipsoid",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "elliptical_cylinder",
           "params": "inputParamsEllipticalCylinder",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "fcc_paracrystal",
           "params": "inputParamsFCCParacrystal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "flexible_cylinder",
           "params": "inputParamsFlexibleCylinder",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "flexible_cylinder_elliptical",
           "params": "inputParamsFlexibleCylinderElliptical",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "fractal",
           "params": "inputParamsFractal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "fractal_core_shell",
           "params": "inputParamsFractalCoreShell",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "fuzzy_sphere",
           "params": "inputParamsFuzzySphere",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "gauss_lorentz_gel",
           "params": "inputParamsGaussLorentzGel",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "gaussian_peak",
           "params": "inputParamsGaussianPeak",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "gel_fit",
           "params": "inputParamsGelFit",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "guinier",
           "params": "inputParamsGuinier",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "guinier_porod",
           "params": "inputParamsGuinierPorod",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "hollow_cylinder",
           "params": "inputParamsHollowCylinder",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "hollow_rectangular_prism",
           "params": "inputParamsHollowRectangularPrism",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "hollow_rectangular_prism_thin_walls",
           "params": "inputParamsHollowRectangularPrismThinWalls",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "lamellar",
           "params": "inputParamsLamellar",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "lamellar_hg",
           "params": "inputParamsLamellarHg",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "lamellar_hg_stack_caille",
           "params": "inputParamsLamellarHgStackCaille",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "lamellar_stack_caille",
           "params": "inputParamsLamellarStackCaille",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "lamellar_stack_paracrystal",
           "params": "inputParamsLamellarStackParacrystal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "line",
           "params": "inputParamsLine",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "linear_pearls",
           "params": "inputParamsLinearPearls",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "lorentz",
           "params": "inputParamsLorentz",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "mass_fractal",
           "params": "inputParamsMassFractal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "mass_surface_fractal",
           "params": "inputParamsMassSurfaceFractal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "mono_gauss_coil",
           "params": "inputParamsMonoGaussCoil",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "multilayer_vesicle",
           "params": "inputParamsMultilayerVesicle",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "onion",
           "params": "inputParamsOnion",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "parallelepiped",
           "params": "inputParamsParallelepiped",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "peak_lorentz",
           "params": "inputParamsPeakLorentz",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "pearl_necklace",
           "params": "inputParamsPearlNecklace",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "poly_gauss_coil",
           "params": "inputParamsPolyGaussCoil",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "polymer_excl_volume",
           "params": "inputParamsPolymerExclVolume",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "polymer_micelle",
           "params": "inputParamsPolymerMicelle",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "porod",
           "params": "inputParamsPorod",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "power_law",
           "params": "inputParamsPowerLaw",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "pringle",
           "params": "inputParamsPringle",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "raspberry",
           "params": "inputParamsRaspberry",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "rectangular_prism",
           "params": "inputParamsRectangularPrism",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "rpa",
           "params": "inputParamsRPA",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "sc_paracrystal",
           "params": "inputParamsSCParacrystal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "sphere",
           "params": "inputParamsSphere",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "spherical_sld",
           "params": "inputParamsSphericalSld",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "spinodal",
           "params": "inputParamsSpinodal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "stacked_disks",
           "params": "inputParamsStackedDisks",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "star_polymer",
           "params": "inputParamsStarPolymer",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "superball",
           "params": "inputParamsSuperball",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "surface_fractal",
           "params": "inputParamsSurfaceFractal",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "teubner_strey",
           "params": "inputParamsTeubnerStrey",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "triaxial_ellipsoid",
           "params": "inputParamsTriaxialEllipsoid",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         },
         {
           "name": "two_lorentzian",
           "params": "inputParamsTwoLorentzian",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "two_power_law",
           "params": "inputParamsTwoPowerLaw",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "unified_power_Rg",
           "params": "inputParamsUnifiedPowerRg",
-          "sfParams": [
-            "inputSFParamsHardSphere",
-            "inputSFParamsHayterMSA",
-            "inputSFParamsSquareWell",
-            "inputSFParamsStickyHardSphere"
-          ],
           "options": "inputOptions"
         },
         {
           "name": "vesicle",
           "params": "inputParamsVesicle",
+          "options": "inputOptions",
           "sfParams": [
             "inputSFParamsHardSphere",
             "inputSFParamsHayterMSA",
             "inputSFParamsSquareWell",
             "inputSFParamsStickyHardSphere"
-          ],
-          "options": "inputOptions"
+          ]
         }
       ]
     },

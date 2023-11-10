@@ -194,7 +194,7 @@ def main(datapackage, params, options, data, outputs, **kwargs):
         # sfParams exists
         sf_name = param_space["sfParams"]["metadata"]["model"]["name"]
         load_name = model_name + "@" + sf_name
-    except TypeError:
+    except (KeyError, TypeError):
         # sfParams is null
         load_name = model_name
 
@@ -206,7 +206,7 @@ def main(datapackage, params, options, data, outputs, **kwargs):
 
     # Get parameter resources
     params = param_space["params"]
-    sf_params = param_space["sfParams"]
+    sf_params = param_space.get("sfParams", None)
 
     if sf_name and sf_params is not None:
         # Combine form factor/polydispersity params with structure factor

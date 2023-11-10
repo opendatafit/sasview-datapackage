@@ -554,10 +554,21 @@ if __name__ == "__main__":
                 polydispersity=True,
             )
 
+            # Enable/disable structure factor selection
+            # Based on sasview logic in perspectives/fitting/basepage.py:2026
+            if (
+                not hasattr(model, "is_form_factor")
+                or not model.is_form_factor
+            ):
+                enable_sf = False
+            else:
+                enable_sf = True
+
             params.append(
                 {
                     "name": model.name,
                     "resource": resource,
+                    "enable_sf": enable_sf,
                 }
             )
 
@@ -594,13 +605,21 @@ if __name__ == "__main__":
 
     # Populate parameterSpaceGroups
     for param in params:
+        parameter_space_group = {
+            "name": param["name"],
+            "params": param["resource"]["name"],
+            "options": DEFAULT_OPTIONS_RESOURCE,
+        }
+
+        if param["enable_sf"]:
+            parameter_space_group.update(
+                {
+                    "sfParams": [i["resource"]["name"] for i in sf_params],
+                }
+            )
+
         algorithm["inputs"][0]["parameterSpaceGroups"].append(
-            {
-                "name": param["name"],
-                "params": param["resource"]["name"],
-                "sfParams": [i["resource"]["name"] for i in sf_params],
-                "options": DEFAULT_OPTIONS_RESOURCE,
-            }
+            parameter_space_group
         )
 
     with open("./algorithms/sasview.json", "w") as f:
