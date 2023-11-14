@@ -20,13 +20,16 @@
           "parameterSpaceMetadata": {
             "title": "Model",
             "params": {
-              "title": "Form Factor Model"
+              "title": "Form Factor Model",
+              "null": false
             },
             "sfParams": {
-              "title": "Structure Factor Model"
+              "title": "Structure Factor Model",
+              "null": true
             },
             "options": {
-              "title": "Options"
+              "title": "Options",
+              "null": false
             }
           },
           "parameterSpaceGroups": [
