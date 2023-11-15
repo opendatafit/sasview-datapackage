@@ -1,6 +1,11 @@
 {
   "title": "SasView 1D",
   "description": "SasView 1D data fitter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/opendatafit/sasview-datapackage",
+    "name": "opendatafit/sasview-datapackage"
+  },
   "algorithms": [
     {
       "name": "sasview",
